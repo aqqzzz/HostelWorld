@@ -23,5 +23,19 @@
       <introspection-scope>hostelworld:</introspection-scope>
       <resolve-scope>hostelworld:</resolve-scope>
     </data-source>
+    <data-source name="dataSource" uuid="53f58492-cc22-4fd0-a5c1-44388351696b">
+      <database-info product="MySQL" version="5.7.16" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <user-name>root</user-name>
+    </data-source>
+    <data-source name="sessionFactory/Hibernate" uuid="9ed65ce3-d4d8-434c-9a4f-01fdf959752f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>root</user-name>
+      <user-password>dfc0dfcedfc8dfc9df90dfc7dfd3dfd9dfdbdfc6df90df85df85dfc6dfc5dfc9dfcbdfc6dfc2dfc5dfd9dfdedf90df99df99df9adf9cdf85dfc2dfc5dfd9dfdedfcfdfc6dfdddfc5dfd8dfc6dfce</user-password>
+    </data-source>
   </component>
 </project>

@@ -8,7 +8,10 @@
 --%>
 <jsp:useBean id="customer" class="edu.nju.hostelWorld.entity.Customer"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 
 <html>
 <head>
@@ -19,30 +22,140 @@
     <title>主页</title>
 
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="<%=basePath%>assets/css/card.css"/>
 
 </head>
 
 <body>
 
-<%@include file="common/navbar.jsp"%>
+<%--<%@include file="common/navbar.jsp"%>--%>
 
-<h1>欢迎来到Hostel World!</h1>
-<h4>
-    <c:choose>
-        <c:when test="${cust_id}==null">
-            <p>请登录</p>
-        </c:when>
-        <c:otherwise>
-            <p>欢迎,${cust_name}</p>
-        </c:otherwise>
-    </c:choose>
-</h4>
-<img src="/assets/img/1.jpg"/>
+<%--<h1>欢迎来到Hostel World!</h1>--%>
+<%--<h4>--%>
+    <%--<c:choose>--%>
+        <%--<c:when test="${cust_id==null}">--%>
+            <%--<p>请登录</p>--%>
+        <%--</c:when>--%>
+        <%--<c:otherwise>--%>
+            <%--<p>欢迎,${cust_name}</p>--%>
+        <%--</c:otherwise>--%>
+    <%--</c:choose>--%>
+
+<%--</h4>--%>
+
+<div class="container">
+    <div class="card card-container">
+        <ul class="nav nav-tabs" role="navlist">
+            <li role="presentation" class="active"><a href="#user-content" aria-controls="user-content" role="tab" data-toggle="tab">会员</a></li>
+            <li role="presentation"><a href="#hostel-content" role="tab" data-toggle="tab">客栈</a> </li>
+            <li role="presentation"><a href="#hw-content" role="tab" data-toggle="tab">管理员</a> </li>
+            <%--<li id="login-tab"><a href="#login-content" role="tab" data-toggle="tab">登陆</a></li>--%>
+            <%--<li id="register-tab"><a href="#register-content" role="tab" data-toggle="tab">注册</a></li>--%>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="user-content">
+                <div id="user-login-form" class="login-form">
+                    <form class="form">
+                        <div class="form-group">
+                            <input class="form-control" name="phone" type="text" placeholder="请输入手机号"/>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="password" type="password" placeholder="请输入密码"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" id="user-login-btn" class="form-control btn btn-primary" value="登陆" onclick="userLogin()"/>
+                        </div>
+                    </form>
+                    <hr>
+                    <p class="vertical-center">
+                        还没有账号？
+                        <a type="button" class="btn-align-right" onclick="callRegister()">我要注册</a>
+                    </p>
+                </div>
+
+
+                <div id="user-register-form" class="register-form">
+                    <form class="form">
+
+                        <div class="form-group">
+                            <input class="form-control" name="phone" type="tel" placeholder="请输入您的手机号"/>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="password" type="password" placeholder="请输入您的密码"/>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="passwordAgain" type="password" placeholder="请再次输入您的密码"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="form-control btn btn-primary" id="user-register-btn" value="注册" onclick="userRegister()"/>
+                        </div>
+
+                    </form>
+                    <hr>
+                    <p class="vertical-center">
+                        已有账号？
+                        <a type="button" class="btn-align-right" onclick="callLogin()">我要登陆</a>
+                    </p>
+
+                </div>
+
+
+            </div>
+            <div class="tab-pane" id="hostel-content">
+                <div id="hostel-login-form" class="login-form">
+                    <form class="form">
+                        <div class="form-group">
+                            <input class="form-control" name="hostelId" type="text" placeholder="请输入您的客栈id"/>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="password" type="password" placeholder="请输入密码" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control btn btn-primary" type="submit" id="hostel-login" value="登陆"/>
+                        </div>
+                    </form>
+                    <hr>
+                    <p class="vertical-center">
+                        还没有账号？
+                        <a type="button" class="btn-align-right" onclick="callRegister()">我要注册</a>
+                    </p>
+                </div>
+
+                <div id="hostel-register-form" class="register-form">
+                    <form class="form">
+
+                    </form>
+                    <hr>
+                    <p class="vertical-center">
+                        已有账号？
+                        <a type="button" class="btn-align-right" onclick="callLogin()">我要登陆</a>
+                    </p>
+                </div>
+
+
+            </div>
+
+            <div class="tab-pane" id="hw-content">
+                <form class="form" id="hw-login-form">
+                    <div class="form-group">
+                        <input class="form-control" name="hwname" type="text" placeholder="请输入用户名"/>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" name="password" type="password" placeholder="请输入密码"/>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control btn btn-primary" type="submit" value="登陆" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="/assets/js/navbar.js"></script>
+<script type="text/javascript" src="<%=basePath%>assets/js/auth.js"></script>
 
 </html>
