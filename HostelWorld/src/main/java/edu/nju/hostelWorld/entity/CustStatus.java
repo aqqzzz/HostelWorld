@@ -4,10 +4,10 @@ import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * Created by 张文玘 on 2017/3/4.
+ * Created by 张文玘 on 2017/3/10.
  */
 @Entity
-@Table(name = "cust_status", schema = "hostelworld")
+@Table(name = "cust_status", schema = "hostelworld", catalog = "")
 public class CustStatus {
     private int id;
     private Date startTime;

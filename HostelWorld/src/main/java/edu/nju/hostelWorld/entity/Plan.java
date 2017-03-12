@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * Created by 张文玘 on 2017/3/4.
+ * Created by 张文玘 on 2017/3/10.
  */
 @Entity
 public class Plan {

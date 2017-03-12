@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
 
-    @RequestMapping("/index")
+    @RequestMapping("")
     public String home(){
-        return "index";
+        return "amazeLogin";
     }
 }

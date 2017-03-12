@@ -3,10 +3,10 @@ package edu.nju.hostelWorld.entity;
 import javax.persistence.*;
 
 /**
- * Created by 张文玘 on 2017/3/4.
+ * Created by 张文玘 on 2017/3/10.
  */
 @Entity
-@Table(name = "room_level", schema = "hostelworld")
+@Table(name = "room_level", schema = "hostelworld", catalog = "")
 public class RoomLevel {
     private int id;
     private Byte roomType;

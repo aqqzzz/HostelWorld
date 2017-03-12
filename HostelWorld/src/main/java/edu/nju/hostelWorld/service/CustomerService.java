@@ -1,7 +1,5 @@
 package edu.nju.hostelWorld.service;
 
-import edu.nju.hostelWorld.entity.Customer;
-
 import java.util.Map;
 
 /**

@@ -4,6 +4,7 @@ import edu.nju.hostelWorld.dao.CustomerDAO;
 import edu.nju.hostelWorld.entity.Customer;
 import edu.nju.hostelWorld.service.CustomerService;
 import edu.nju.hostelWorld.util.DataUtil;
+import javafx.scene.chart.PieChart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,14 +33,26 @@ public class CustomerServiceImpl implements CustomerService{
         }else if(!password.equals(passwordAgain)){
             map.put("success", false);
             map.put("error","两次输入的密码不对应！");
-        }else if(customerDAO.findCustByPhone(phone)!=null){
+        }else if(customerDAO.findByPhone(phone)!=null){
 
             map.put("success", false);
             map.put("error","这个手机号已经被注册了！");
         }else{
-            Customer newCust = customerDAO.save(phone,password);
+            Customer customer = new Customer();
+            customer.setPhone(phone);
+            customer.setPassword(password);
+
+            customer.setStatus(DataUtil.NOT_ACTIVITED);
+
+            int id = DataUtil.getRandomId();
+            while(customerDAO.findByUserid(id)!=null){
+                id = DataUtil.getRandomId();
+            }
+            customer.setUserid(id);
+
+            customerDAO.save(customer);
             map.put("success", true);
-            map.put("cust_id", newCust.getUserid());
+            map.put("cust_id", customer.getUserid());
             map.put("cust_phone", phone);
         }
         return map;
@@ -56,7 +69,7 @@ public class CustomerServiceImpl implements CustomerService{
             map.put("success", false);
             map.put("error", "请填写正确的手机号！");
         }else{
-            Customer cust = customerDAO.findCustByPhone(phone);
+            Customer cust = customerDAO.findByPhone(phone);
             if(cust==null){
                 map.put("success", false);
                 map.put("error", "手机号未注册！");
@@ -67,7 +80,7 @@ public class CustomerServiceImpl implements CustomerService{
             }else{
                 map.put("success", true);
                 map.put("cust_id", cust.getUserid());
-                map.put("cust_name", cust.getName());
+                map.put("cust_phone", cust.getPhone());
 
             }
         }

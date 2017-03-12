@@ -1,13 +1,18 @@
 package edu.nju.hostelWorld.dao;
 
 import edu.nju.hostelWorld.entity.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created by 张文玘 on 2017/3/4.
  */
-public interface CustomerDAO {
+@Repository
+public interface CustomerDAO extends JpaRepository<Customer, Long> {
 
-    public Customer save(String phone, String password);
-    public Customer findCustById(int id);
-    public Customer findCustByPhone(String phone);
+    Customer findByPhone(String phone);
+
+    Customer findByUserid(int id);
+
 }

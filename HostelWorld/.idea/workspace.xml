@@ -2,18 +2,189 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e79e23d3-8bda-4fd9-ab10-549535350916" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/card.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_4_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_el_api_6_0_39.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_jsp_api_6_0_39.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_servlet_api_6_0_39.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_7_0_54.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_7_0_54.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_servlet_api_8_0_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_ehcache_4_2_5_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_11_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_9_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_0_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_0_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_0_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/CustomerController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spring-jpa.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amaze/amazeui.ie8polyfill.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amaze/amazeui.ie8polyfill.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amaze/amazeui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amaze/amazeui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amaze/amazeui.widgets.helper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amaze/amazeui.widgets.helper.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amaze/handlebars.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amaze/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/customer/supplyInfo.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aspectj_aspectjweaver_1_5_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__c3p0_c3p0_0_9_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_jsr250_api_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_el_el_api_2_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_enterprise_cdi_api_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jstl_javax_servlet_jsp_jstl_api_1_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_interceptor_jboss_interceptors_api_1_1_spec_1_0_0_Beta1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tomcat_jsp_api_5_5_23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tomcat_servlet_api_5_5_23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/impl/BaseDAOImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/impl/CustomerDAOImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-hibernate.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/addUser.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/pages/auth/register.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/dao/impl/BaseDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/dao/impl/CustomerDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/spring/spring-hibernate.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/jsp/user/addUser.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/jsp/user/user.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/aspectjweaver-1.5.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/c3p0-0.9.1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/cdi-api-1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/classmate-1.0.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/commons-fileupload-1.3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/commons-io-2.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/el-api-2.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/geronimo-jta_1.1_spec-1.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/hibernate-core-5.2.6.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/hibernate-validator-5.1.2.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/jackson-annotations-2.5.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/jackson-core-2.7.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/jackson-core-asl-1.9.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/jackson-databind-2.5.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/jandex-2.0.3.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/javassist-3.20.0-GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/javax.inject-1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/jsr250-api-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/mysql-connector-java-5.1.31.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/standard-1.1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/lib/validation-api-1.1.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/pages/auth/login.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/HostelWorld/pages/auth/register.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/dao/impl/BaseDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/dao/impl/CustomerDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/spring-hibernate.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/controller/AuthController.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/controller/AuthController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/controller/MainController.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/controller/MainController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/dao/CustomerDAO.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/dao/CustomerDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/BankAccount.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/BankAccount.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/CustLevel.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/CustLevel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/CustStatus.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/CustStatus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/Customer.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/Customer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/HostelKeeper.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/HostelKeeper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/RoomInfo.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/RoomInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/RoomLevel.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/entity/RoomLevel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/util/DataUtil.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/util/DataUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/controller/AuthController.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/controller/AuthController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/controller/MainController.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/controller/MainController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/dao/CustomerDAO.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/dao/CustomerDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/BankAccount.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/BankAccount.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/CustLevel.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/CustLevel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/CustStatus.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/CustStatus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/Customer.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/Customer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/HostelKeeper.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/HostelKeeper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/RoomInfo.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/RoomInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/RoomLevel.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/entity/RoomLevel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/util/DataUtil.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/util/DataUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/HostelWorld_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/HostelWorld_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_6_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_6_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_6_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_6_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_6_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_6_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_6_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_6_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_6_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_6_RELEASE.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HostelWorld.iml" afterPath="$PROJECT_DIR$/HostelWorld.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/navbar.js" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/navbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/AuthController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/AuthController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/CustomerDAO.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/CustomerDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Apply.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Apply.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/BankAccount.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/BankAccount.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/CustLevel.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/CustLevel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/CustStatus.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/CustStatus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Customer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Hostel.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Hostel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/HostelKeeper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/HostelKeeper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Pay.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Pay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Plan.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Plan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Reserve.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Reserve.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/RoomInfo.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/RoomInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/RoomLevel.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/RoomLevel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/CustomerService.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/CustomerService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/util/DataUtil.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/util/DataUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/src/main/resources/springmvc-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/auth.js" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/auth.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/assets/js/navbar.js" afterPath="$PROJECT_DIR$/target/HostelWorld/assets/js/navbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/springmvc-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/pages/index.jsp" afterPath="$PROJECT_DIR$/target/HostelWorld/pages/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/target/classes/springmvc-servlet.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_7_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_5.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_5.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_31.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_35.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_2_Final.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_6_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_2_5_Final.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_1_2_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_2_5_Final.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_15_0_GA.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_0_GA.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/user.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/amazeLogin.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/card.css" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/pages/auth/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/customer/home.jsp" />
     </list>
     <ignored path="HostelWorld.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,11 +215,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="springmvc-servlet.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc-servlet.xml">
+      <file leaf-file-name="auth.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/auth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+            <state relative-caret-position="374">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -57,23 +238,33 @@
       <file leaf-file-name="CustomerServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+            <state relative-caret-position="418">
+              <caret line="28" column="38" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="e#1682#1698#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/impl/CustomerDAOImpl.java">
+      <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/AuthController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="946">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="22">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#285#286#0" expanded="true" />
+                <element signature="e#320#321#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,72 +273,38 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="158" column="63" selection-start-line="158" selection-start-column="63" selection-end-line="158" selection-end-column="63" />
+            <state relative-caret-position="288">
+              <caret line="167" column="6" selection-start-line="167" selection-start-column="6" selection-end-line="167" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/card.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1760">
-              <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/navbar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1144">
-              <caret line="54" column="0" selection-start-line="45" selection-start-column="4" selection-end-line="54" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc;n#callRegister#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/auth.js">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc;n#callRegister#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbar.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/common/navbar.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/auth/login.jsp">
+      <file leaf-file-name="amazeLogin.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/amazeLogin.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="246">
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/AuthController.java">
+      <file leaf-file-name="supplyInfo.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/customer/supplyInfo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+            <state relative-caret-position="280">
+              <caret line="67" column="80" selection-start-line="67" selection-start-column="59" selection-end-line="67" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -158,11 +315,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Jsp File" />
-        <option value="Class" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="spring-beans.schema" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -177,26 +335,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/BaseDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/BaseDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/UserDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/addUser.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/CustomerEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/HostelEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/ApplyEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/BankAccountEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/CustLevelEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/CustStatusEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/HostelKeeperEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/PayEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/PlanEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/ReserveEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/RoomInfoEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/RoomLevelEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/impl/BaseDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/impl/CustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/CustController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/auth/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/bean/CustomerBean.java" />
@@ -205,29 +343,49 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/HostelKeeper.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/RoomInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/RoomLevel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Customer.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/CustStatus.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/auth/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/util/DataChecker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/CustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/CustomerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/util/DataUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/impl/CustomerDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-hibernate.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/AuthController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/common/navbar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/springmvc-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/common/navbar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/assets/css/card.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/assets/js/navbar.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/assets/js/auth.jsp.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/Customer1Dao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-hibernate.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/springmvc-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/defaultPersistenceUnit.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-jpa.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/defaultPersistenceUnit.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-jpa.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/CustomerDetailService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/SecurityService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/impl/SecurityServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/impl/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/customer/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/customer/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/util/DataUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/CustomerDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/assets/css/card.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/customer/supplyInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/customer/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/AuthController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/CustomerController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/assets/js/auth.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/amazeLogin.jsp" />
       </list>
     </option>
   </component>
@@ -252,7 +410,32 @@
     </option>
   </component>
   <component name="MavenProjectNavigator">
-    <treeState />
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="HostelWorld Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="HostelWorld Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
@@ -285,7 +468,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -352,6 +534,10 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -401,11 +587,75 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="customer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amaze" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -509,7 +759,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spring" />
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -536,6 +786,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hostelWorld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -629,13 +883,100 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hostelWorld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hostelWorld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hostelWorld" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -653,23 +994,44 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\J2EE\intellij\HostelWorld\src\main\webapp" />
-      <recent name="D:\workspace\J2EE\intellij\HostelWorld\src\main\webapp\WEB-INF" />
-      <recent name="D:\workspace\J2EE\intellij\HostelWorld\src\main\webapp\vendor\bootStrap" />
-      <recent name="D:\workspace\J2EE\intellij\HostelWorld\src\main\webapp\vendor" />
-      <recent name="D:\workspace\J2EE\intellij\HostelWorld\src\main\resources" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="edu.nju.hostelWorld.entity" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\J2EE\HostelWorld\HostelWorld\src\main\webapp\vendor" />
       <recent name="D:\workspace\J2EE\intellij\HostelWorld\src\main\webapp\assets\img" />
       <recent name="D:\workspace\J2EE\intellij\HostelWorld\src\main\webapp\vendor\jquery" />
       <recent name="D:\workspace\J2EE\intellij\HostelWorld\src\main\webapp" />
     </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="edu.nju.hostelWorld.entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\J2EE\HostelWorld\HostelWorld\src\main\webapp\assets" />
+      <recent name="D:\workspace\J2EE\HostelWorld\HostelWorld\src\main\webapp\assets\css\amaze" />
+      <recent name="D:\workspace\J2EE\HostelWorld\HostelWorld\src\main\webapp\assets\js\amaze" />
+      <recent name="D:\workspace\J2EE\HostelWorld\HostelWorld\src\main\webapp\assets\js" />
+      <recent name="D:\workspace\J2EE\HostelWorld\HostelWorld\src\main\webapp\assets\css" />
+    </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.local">
+    <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="edu.nju.hostelWorld.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="edu.nju.hostelWorld.Test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="HostelWorld" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings />
@@ -1168,9 +1530,15 @@
         </option>
       </method>
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.local" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Test" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1195,12 +1563,26 @@
       <workItem from="1488936112322" duration="3227000" />
       <workItem from="1489062926588" duration="11735000" />
       <workItem from="1489078250615" duration="391000" />
-      <workItem from="1489106200150" duration="389000" />
+      <workItem from="1489106200150" duration="6587000" />
+      <workItem from="1489114142822" duration="5664000" />
+      <workItem from="1489125682266" duration="3371000" />
+      <workItem from="1489133753208" duration="21079000" />
+      <workItem from="1489285709695" duration="7865000" />
+      <workItem from="1489306070424" duration="864000" />
+      <workItem from="1489307570493" duration="8882000" />
     </task>
+    <task id="LOCAL-00001" summary="改了一下登陆的页面&#10;">
+      <created>1489106650911</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1489106650911</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72865000" />
+    <option name="totallyTimeSpent" value="126788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1208,37 +1590,71 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4020385" sideWeight="0.50429183" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2859442" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2859442" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3203991" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3203991" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32616082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26160815" sideWeight="0.49570817" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19796138" sideWeight="0.1590909" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17167382" sideWeight="0.84090906" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2167382" sideWeight="0.50584793" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33182332" sideWeight="0.49334812" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32616082" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4847112" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47225368" sideWeight="0.49570817" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2594235" sideWeight="0.446198" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18079399" sideWeight="0.553802" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2167382" sideWeight="0.50584793" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.49334812" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4020385" sideWeight="0.50429183" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2859442" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3203991" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33182332" sideWeight="0.49334812" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32616082" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4847112" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20160367" sideWeight="0.49570817" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2594235" sideWeight="0.446198" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.553802" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2167382" sideWeight="0.50584793" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1251,6 +1667,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="改了一下登陆的页面&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="改了一下登陆的页面&#10;" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -1260,49 +1680,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/CustStatusEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/HostelEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/HostelKeeperEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/PayEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/PlanEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/ReserveEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/RoomInfoEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/RoomLevelEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/UserDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/CustomerEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/impl/BaseDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/UserDAOImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/BaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/UserService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/ApplyEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/UserServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/CustomerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/CustController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/auth/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/auth/register.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/bean/CustomerBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -1373,183 +1751,265 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/user.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/addUser.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/common/navbar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/impl/CustomerDAOImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/Customer1Dao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-jpa.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/impl/BaseDAOImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/navbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="43" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/auth/login.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/RoomLevel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Customer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
-          <caret line="161" column="25" selection-start-line="161" selection-start-column="25" selection-end-line="161" selection-end-column="25" />
+          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-jpa.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="32" column="66" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/CustStatus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
+        <state relative-caret-position="-365">
           <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/user.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/SecurityService.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state relative-caret-position="352">
+          <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/addUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="27" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/CustomerDetailService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/impl/UserDetailsServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/impl/SecurityServiceImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/CustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+        <state relative-caret-position="154">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/customer/login.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/customer/register.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/util/DataUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#291#292#0" expanded="false" />
-            <element signature="e#321#322#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="264">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/CustomerDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        <state relative-caret-position="242">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/util/DataUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/entity/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="374">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#603#604#0" expanded="false" />
+            <element signature="e#632#633#0" expanded="false" />
+            <element signature="e#673#674#0" expanded="false" />
+            <element signature="e#709#710#0" expanded="false" />
+            <element signature="e#816#817#0" expanded="false" />
+            <element signature="e#847#848#0" expanded="false" />
+            <element signature="e#895#896#0" expanded="false" />
+            <element signature="e#935#936#0" expanded="false" />
+            <element signature="e#1035#1036#0" expanded="false" />
+            <element signature="e#1063#1064#0" expanded="false" />
+            <element signature="e#1105#1106#0" expanded="false" />
+            <element signature="e#1139#1140#0" expanded="false" />
+            <element signature="e#1227#1228#0" expanded="false" />
+            <element signature="e#1256#1257#0" expanded="false" />
+            <element signature="e#1298#1299#0" expanded="false" />
+            <element signature="e#1334#1335#0" expanded="false" />
+            <element signature="e#1432#1433#0" expanded="false" />
+            <element signature="e#1459#1460#0" expanded="false" />
+            <element signature="e#1499#1500#0" expanded="false" />
+            <element signature="e#1531#1532#0" expanded="false" />
+            <element signature="e#1623#1624#0" expanded="false" />
+            <element signature="e#1654#1655#0" expanded="false" />
+            <element signature="e#1700#1701#0" expanded="false" />
+            <element signature="e#1740#1741#0" expanded="false" />
+            <element signature="e#1828#1829#0" expanded="false" />
+            <element signature="e#1857#1858#0" expanded="false" />
+            <element signature="e#1899#1900#0" expanded="false" />
+            <element signature="e#1935#1936#0" expanded="false" />
+            <element signature="e#2042#2043#0" expanded="false" />
+            <element signature="e#2072#2073#0" expanded="false" />
+            <element signature="e#2118#2119#0" expanded="false" />
+            <element signature="e#2156#2157#0" expanded="false" />
+            <element signature="e#2245#2246#0" expanded="false" />
+            <element signature="e#2273#2274#0" expanded="false" />
+            <element signature="e#2316#2317#0" expanded="false" />
+            <element signature="e#2350#2351#0" expanded="false" />
+            <element signature="e#2468#2469#0" expanded="false" />
+            <element signature="e#2503#2504#0" expanded="false" />
+            <element signature="e#2559#2560#0" expanded="false" />
+            <element signature="e#2607#2608#0" expanded="false" />
+            <element signature="e#4734#4735#0" expanded="false" />
+            <element signature="e#4775#4776#0" expanded="false" />
+            <element signature="e#4847#4848#0" expanded="false" />
+            <element signature="e#4907#4908#0" expanded="false" />
+            <element signature="e#5040#5041#0" expanded="false" />
+            <element signature="e#5084#5085#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        <state relative-caret-position="383">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/customer/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="286">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-hibernate.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="126" column="19" selection-start-line="126" selection-start-column="19" selection-end-line="126" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/impl/CustomerDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="506">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="false" />
+            <element signature="e#1030#1031#0" expanded="false" />
+            <element signature="e#1055#1056#0" expanded="false" />
+            <element signature="e#1154#1155#0" expanded="false" />
+            <element signature="e#1192#1193#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+        <state relative-caret-position="418">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1682#1698#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/auth/login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/common/navbar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/card.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1760">
-          <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/navbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="54" column="0" selection-start-line="45" selection-start-column="4" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc;n#callRegister#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/auth.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc;n#callRegister#0" expanded="false" />
-          </folding>
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="158" column="63" selection-start-line="158" selection-start-column="63" selection-end-line="158" selection-end-column="63" />
+        <state relative-caret-position="288">
+          <caret line="167" column="6" selection-start-line="167" selection-start-column="6" selection-end-line="167" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding>
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/customer/supplyInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="67" column="80" selection-start-line="67" selection-start-column="59" selection-end-line="67" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/amazeLogin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/AuthController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+        <state relative-caret-position="22">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: 张文玘
@@ -22,7 +23,21 @@
     <title>主页</title>
 
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="<%=basePath%>assets/css/card.css"/>
+    <link rel="stylesheet" href="<%=basePath%>assets/css/style.css"/>
+    <link rel="stylesheet" href="<%=basePath%>assets/css/amaze/amazeui.css"/>
+    <link rel="stylesheet" href="<%=basePath%>assets/css/amaze/amazeui.min.css"/>
+    <link rel="stylesheet" href="<%=basePath%>assets/css/amaze/amazeui.flat.css"/>
+    <link rel="stylesheet" href="<%=basePath%>assets/css/amaze/amazeui.flat.min.css"/>
+
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<%=basePath%>assets/js/amaze/amazeui.js"/>
+
+    <script type="text/javascript" src="<%=basePath%>assets/js/amaze/amazeui.min.js"/>
+    <script type="text/javascript" src="<%=basePath%>assets/js/amaze/amazeui.widgets.helper.min.js"/>
+    <script type="text/javascript" src="<%=basePath%>assets/js/amaze/amazeui.ie8polyfill.min.js"/>
+    <script type="text/javascript" src="<%=basePath%>assets/js/amaze/handlebars.min.js"/>
+    <script type="text/javascript" src="<%=basePath%>assets/js/auth.js"></script>
 
 </head>
 
@@ -44,7 +59,7 @@
 <%--</h4>--%>
 
 <div class="container">
-    <div class="card card-container">
+    <%--<div class="card card-container">--%>
         <ul class="nav nav-tabs" role="navlist">
             <li role="presentation" class="active"><a href="#user-content" aria-controls="user-content" role="tab" data-toggle="tab">会员</a></li>
             <li role="presentation"><a href="#hostel-content" role="tab" data-toggle="tab">客栈</a> </li>
@@ -54,8 +69,8 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="user-content">
-                <div id="user-login-form" class="login-form">
-                    <form class="form">
+                <div class="login-form">
+                    <form class="form" id="user-login-form">
                         <div class="form-group">
                             <input class="form-control" name="phone" type="text" placeholder="请输入手机号"/>
                         </div>
@@ -63,7 +78,7 @@
                             <input class="form-control" name="password" type="password" placeholder="请输入密码"/>
                         </div>
                         <div class="form-group">
-                            <input type="submit" id="user-login-btn" class="form-control btn btn-primary" value="登陆" onclick="userLogin()"/>
+                            <input type="submit" id="user-login-btn" class="form-control btn btn-primary" onclick="userLogin()" value="登陆"/>
                         </div>
                     </form>
                     <hr>
@@ -74,11 +89,11 @@
                 </div>
 
 
-                <div id="user-register-form" class="register-form">
-                    <form class="form">
+                <div class="register-form">
+                    <form class="form" id="user-register-form">
 
                         <div class="form-group">
-                            <input class="form-control" name="phone" type="tel" placeholder="请输入您的手机号"/>
+                            <input name="phone" class="form-control" type="tel" placeholder="请输入您的手机号"/>
                         </div>
                         <div class="form-group">
                             <input class="form-control" name="password" type="password" placeholder="请输入您的密码"/>
@@ -102,8 +117,8 @@
 
             </div>
             <div class="tab-pane" id="hostel-content">
-                <div id="hostel-login-form" class="login-form">
-                    <form class="form">
+                <div class="login-form">
+                    <form class="form" id="hostel-login-form" >
                         <div class="form-group">
                             <input class="form-control" name="hostelId" type="text" placeholder="请输入您的客栈id"/>
                         </div>
@@ -121,8 +136,8 @@
                     </p>
                 </div>
 
-                <div id="hostel-register-form" class="register-form">
-                    <form class="form">
+                <div class="register-form">
+                    <form class="form" id="hostel-register-form" >
 
                     </form>
                     <hr>
@@ -149,13 +164,10 @@
                 </form>
             </div>
         </div>
-    </div>
+    <%--</div>--%>
 </div>
 
 </body>
-<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="<%=basePath%>assets/js/auth.js"></script>
 
 </html>
