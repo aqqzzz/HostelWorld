@@ -62,33 +62,33 @@
         <div class="am-tabs-bd">
             <div class="am-tab-panel am-active" id="user-content">
                 <div class="login-form">
-                    <form class="am-form am-form-horizontal" id="user-login-form">
+                <form class="am-form am-form-horizontal" id="user-login-form">
 
-                        <div class="am-form-group">
-                            <label class="am-form-label am-u-md-3">手机号</label>
-                            <div class="am-u-md-9">
-                                <input class="form-control" id="phone" name="phone" type="text" placeholder="请输入手机号"/>
-                            </div>
+                    <div class="am-form-group">
+                        <label class="am-form-label am-u-md-3">手机号</label>
+                        <div class="am-u-md-9">
+                            <input class="form-control" id="phone" name="phone" type="text" placeholder="请输入手机号"/>
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
+                        <label class="am-form-label am-u-md-3">密码</label>
+                        <div class="am-u-md-9">
+                            <input class="form-control" name="password" type="password" placeholder="请输入密码"/>
                         </div>
 
-                        <div class="am-form-group">
-                            <label class="am-form-label am-u-md-3">密码</label>
-                            <div class="am-u-md-9">
-                                <input class="form-control" name="password" type="password" placeholder="请输入密码"/>
-                            </div>
+                    </div>
+                    <div class="am-form-group">
+                        <input type="submit" id="user-login-btn" class="am-btn am-btn-primary am-btn-block" onclick="userLogin(event)" value="登陆"/>
+                    </div>
+                </form>
+                <hr>
+                <p class="vertical-center">
 
-                        </div>
-                        <div class="am-form-group">
-                            <input type="submit" id="user-login-btn" class="am-btn am-btn-primary am-btn-block" onclick="userLogin()" value="登陆"/>
-                        </div>
-                    </form>
-                    <hr>
-                    <p class="vertical-center">
-
-                        还没有账号？
-                        <a type="button" class="btn-align-right" onclick="callRegister()">我要注册</a>
-                    </p>
-                </div>
+                    还没有账号？
+                    <a type="button" class="btn-align-right" onclick="callRegister()">我要注册</a>
+                </p>
+            </div>
 
 
                 <div class="register-form">
@@ -146,7 +146,7 @@
                         </div>
 
                         <div class="am-form-group">
-                            <input type="submit" class="am-btn am-btn-primary am-btn-block" id="user-register-btn" value="注册" onclick="userRegister()"/>
+                            <input type="submit" class="am-btn am-btn-primary am-btn-block" id="user-register-btn" value="注册" onclick="userRegister(event)"/>
                         </div>
 
                     </form>

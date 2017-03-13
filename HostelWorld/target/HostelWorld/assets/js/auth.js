@@ -11,12 +11,13 @@ function callLogin(){
     $('.register-form').css("display","none");
 }
 
-function userLogin(){
+function userLogin(e){
     alert("click login submit");
     $.ajax({
         type:'POST',
         url:'/auth/login',
         data:$('#user-login-form').serialize(),
+        dataType: 'json',
         success:function (result) {
             alert("ajax success");
             alert(JSON.stringify(result));
@@ -27,11 +28,12 @@ function userLogin(){
             }
         },
         error:function (result) {
-            alert("this is an error");
             alert(JSON.stringify(result));
+            exit();
 
         }
-    })
+    });
+    e.preventDefault();
 }
 
 function userRegister(){
@@ -49,9 +51,10 @@ function userRegister(){
             }
         },
         error:function (result) {
-            console.log(JSON.stringify(result));
+            echo(JSON.stringify(result));
 
             alert("this is an error");
         }
-    })
+    });
+    // e.preventDefault();
 }

@@ -35,20 +35,6 @@ public class AuthController {
         }
         return map;
     }
-//    @RequestMapping(value = "/login")
-//    public ModelAndView login(String phone, String password, HttpSession session){
-//        ModelAndView mav = new ModelAndView();
-//        Map<String, Object> map = customerService.login(phone, password);
-//        if((Boolean) map.get("success")){
-//            session.setAttribute("cust_id", map.get("cust_id"));
-//            session.setAttribute("cust_phone", map.get("cust_phone"));
-//            mav.setViewName("/customer/home");
-//        }else{
-//            mav.addObject("error",map.get("error"));
-//            mav.setViewName("/index");
-//        }
-//        return mav;
-//    }
 
     @RequestMapping("/register")
     @ResponseBody
