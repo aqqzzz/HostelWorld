@@ -6,10 +6,9 @@ import javax.persistence.*;
  * Created by 张文玘 on 2017/3/10.
  */
 @Entity
-@Table(name = "bank_account", schema = "hostelworld", catalog = "")
+@Table(name = "bank_account", schema = "hostelworld")
 public class BankAccount {
     private String id;
-    private String password;
     private Double balance;
 
     @Id
@@ -20,16 +19,6 @@ public class BankAccount {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    @Basic
-    @Column(name = "password", nullable = false, length = 0)
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     @Basic
@@ -50,7 +39,6 @@ public class BankAccount {
         BankAccount that = (BankAccount) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (password != null ? !password.equals(that.password) : that.password != null) return false;
         if (balance != null ? !balance.equals(that.balance) : that.balance != null) return false;
 
         return true;
@@ -59,7 +47,6 @@ public class BankAccount {
     @Override
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (balance != null ? balance.hashCode() : 0);
         return result;
     }
