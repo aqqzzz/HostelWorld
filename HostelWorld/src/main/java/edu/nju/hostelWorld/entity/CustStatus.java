@@ -7,7 +7,7 @@ import java.sql.Date;
  * Created by 张文玘 on 2017/3/10.
  */
 @Entity
-@Table(name = "cust_status", schema = "hostelworld", catalog = "")
+@Table(name = "cust_status", schema = "hostelworld")
 public class CustStatus {
     private int id;
     private Date startTime;

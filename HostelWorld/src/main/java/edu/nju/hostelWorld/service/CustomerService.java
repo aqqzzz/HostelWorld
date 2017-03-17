@@ -1,5 +1,7 @@
 package edu.nju.hostelWorld.service;
 
+import edu.nju.hostelWorld.entity.Customer;
+
 import java.util.Map;
 
 /**
@@ -7,7 +9,7 @@ import java.util.Map;
  */
 public interface CustomerService {
 
-    public Map<String,Object> register(String phone, String password, String passwordAgain);
+    public Map<String,Object> register(Customer customer);
 
     public Map<String, Object> login(String phone, String password);
 }

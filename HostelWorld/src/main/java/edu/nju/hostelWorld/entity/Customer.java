@@ -1,6 +1,9 @@
 package edu.nju.hostelWorld.entity;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 /**
@@ -13,7 +16,6 @@ public class Customer {
     private String phone;
     private Byte status;
     private String name;
-    private Date birthday;
     private Byte gender;
     private Double balance;
     private Integer point;
@@ -33,6 +35,7 @@ public class Customer {
 
     @Basic
     @Column(name = "password", nullable = false, length = 0)
+    @NotEmpty(message="必填")
     public String getPassword() {
         return password;
     }
@@ -43,6 +46,7 @@ public class Customer {
 
     @Basic
     @Column(name = "phone", nullable = true, length = 0)
+    @NotEmpty(message="必填")
     public String getPhone() {
         return phone;
     }
@@ -69,16 +73,6 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Basic
-    @Column(name = "birthday", nullable = true)
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
     }
 
     @Basic
@@ -133,7 +127,6 @@ public class Customer {
         if (phone != null ? !phone.equals(customer.phone) : customer.phone != null) return false;
         if (status != null ? !status.equals(customer.status) : customer.status != null) return false;
         if (name != null ? !name.equals(customer.name) : customer.name != null) return false;
-        if (birthday != null ? !birthday.equals(customer.birthday) : customer.birthday != null) return false;
         if (gender != null ? !gender.equals(customer.gender) : customer.gender != null) return false;
         if (balance != null ? !balance.equals(customer.balance) : customer.balance != null) return false;
         if (point != null ? !point.equals(customer.point) : customer.point != null) return false;
@@ -150,7 +143,6 @@ public class Customer {
         result = 31 * result + (phone != null ? phone.hashCode() : 0);
         result = 31 * result + (status != null ? status.hashCode() : 0);
         result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (birthday != null ? birthday.hashCode() : 0);
         result = 31 * result + (gender != null ? gender.hashCode() : 0);
         result = 31 * result + (balance != null ? balance.hashCode() : 0);
         result = 31 * result + (point != null ? point.hashCode() : 0);
