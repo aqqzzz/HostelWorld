@@ -1,6 +1,9 @@
 package edu.nju.hostelWorld.entity;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
 
 /**
  * Created by 张文玘 on 2017/3/10.
@@ -13,6 +16,7 @@ public class BankAccount {
 
     @Id
     @Column(name = "id", nullable = false, length = 20)
+    @Length(min=16, max=19,message = "请输入16~19位的银行卡号！")
     public String getId() {
         return id;
     }

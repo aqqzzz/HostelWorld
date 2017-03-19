@@ -14,6 +14,8 @@ public class DataUtil {
     public static byte PAUSE = 2;
     public static byte STOP = 3;
 
+    public static double INITIAL_BALANCE=1000000000;
+
     public static boolean isPhoneNum(String phoneNumber){
         Pattern pattern = Pattern.compile("^\\d{11}$");
         Matcher matcher = pattern.matcher(phoneNumber);

@@ -31,7 +31,77 @@ body, html{
     padding-top: .4em;
 }
 
+.form-error {
+    color: #ff6666;
+    font-family:"Microsoft YaHei";
+}
 
+.home-curtain{
+    background-image: url(/assets/img/home_curtain.jpg);
+    color: #fff;
+    text-align: center;
+    padding: 200px 0;
+    background-repeat:no-repeat;
+}
+
+.home-curtain-title {
+    font-size: 200%;
+    border: 2px solid #fff;
+    padding: 20px;
+    display: inline-block;
+}
+
+.home-detail{
+    background: #fff;
+}
+
+.home-detail-h1{
+    text-align: center;
+    font-size: 200%;
+    margin:40px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.home-detail-p{
+    text-align: center;
+}
+
+.am-gallery-item {
+    overflow: hidden;
+}
+
+.am-gallery-item img, .am-gallery-item img+h3{
+    -webkit-transition: transform 0.8s, height 0.8s;
+    -moz-transition: transform 0.8s;
+    -ms-transition: transform 0.8s;
+    -o-transition: transform 0.8s;
+    transition: transform 0.8s;
+}
+
+.am-gallery-item img:hover{
+    transform: scale(1.1,1.1);
+}
+
+.am-gallery-item img:hover+h3{
+    transform: scale(1.1,1.1);
+}
+
+.sidebar{
+    margin-top:20px;
+}
+
+.sidebar>.nav-stacked{
+    background-color: #f8f8f8;
+}
+
+.panel{
+    margin-top:20px;
+}
+
+.panel-heading{
+    background-color: #f8f8f8;
+}
 
 
 

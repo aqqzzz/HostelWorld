@@ -32,7 +32,7 @@
       <user-name>root</user-name>
       <user-password>dfc0dfcedfc8dfc9df90dfc7dfd3dfd9dfdbdfc6df90df85df85dfc6dfc5dfc9dfcbdfc6dfc2dfc5dfd9dfdedf90df99df99df9adf9cdf85dfc2dfc5dfd9dfdedfcfdfc6dfdddfc5dfd8dfc6dfce</user-password>
     </data-source>
-    <data-source name="MySQL - hostelworld@localhost" uuid="0a26c789-3399-4f3c-b942-d3b323862fa1">
+    <data-source name="MySQL - hostelworld@localhost" uuid="424d3fb4-021d-4dfd-b4b1-8ee21e415702">
       <database-info product="MySQL" version="5.7.16" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>

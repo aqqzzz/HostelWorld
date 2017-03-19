@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.util.Enumeration;
 import java.util.Map;
 
 /**
@@ -97,6 +98,15 @@ public class AuthController {
             }
             return "register";
         }
+    }
+
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logout(HttpSession session){
+        Enumeration em = session.getAttributeNames();
+        while(em.hasMoreElements()){
+            session.removeAttribute(em.nextElement().toString());
+        }
+        return "redirect:/auth/login";
     }
 
 

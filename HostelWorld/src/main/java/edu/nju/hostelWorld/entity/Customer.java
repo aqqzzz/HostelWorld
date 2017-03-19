@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.util.Date;
 
 /**
@@ -35,7 +36,7 @@ public class Customer {
 
     @Basic
     @Column(name = "password", nullable = false, length = 0)
-    @NotEmpty(message="必填")
+    @NotEmpty(message="请输入您的密码")
     public String getPassword() {
         return password;
     }
@@ -46,7 +47,8 @@ public class Customer {
 
     @Basic
     @Column(name = "phone", nullable = true, length = 0)
-    @NotEmpty(message="必填")
+    @NotEmpty(message="请输入您的手机号")
+    @Pattern(regexp = "^\\d{11}$", message = "手机号格式错误！")
     public String getPhone() {
         return phone;
     }

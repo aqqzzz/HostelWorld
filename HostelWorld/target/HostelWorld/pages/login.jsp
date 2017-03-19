@@ -13,39 +13,15 @@
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <html>
-<head>
-    <title>登陆</title>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
-
-    <link rel="stylesheet" href="<%=basePath%>assets/css/amaze/amazeui.css"/>
-    <link rel="stylesheet" href="<%=basePath%>assets/css/amaze/amazeui.min.css"/>
-    <link rel="stylesheet" href="<%=basePath%>assets/css/amaze/amazeui.flat.css"/>
-    <link rel="stylesheet" href="<%=basePath%>assets/css/amaze/amazeui.flat.min.css"/>
-
-    <link rel="stylesheet" href="<%=basePath%>assets/css/style.css"/>
-
-    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-    <script type="text/javascript" src="<%=basePath%>assets/js/amaze/amazeui.min.js"></script>
-    <script type="text/javascript" src="<%=basePath%>assets/js/amaze/amazeui.widgets.helper.min.js"></script>
-    <script type="text/javascript" src="<%=basePath%>assets/js/amaze/amazeui.ie8polyfill.min.js"></script>
-    <script type="text/javascript" src="<%=basePath%>assets/js/amaze/handlebars.min.js"></script>
-    <script type="text/javascript" src="<%=basePath%>assets/js/auth.js"></script>
-
-
-</head>
+<jsp:include page="common/includeHeader.jsp">
+    <jsp:param name="title" value="登陆"/>
+</jsp:include>
 <body>
 <jsp:include page="common/navbar.jsp"/>
 <div class="header">
     <div class="am-g">
         <h1>Hostel World</h1>
-        <p>加入我们</p>
+        <a href="/auth/register">加入我们</a>
     </div>
     <hr/>
 </div>
@@ -73,7 +49,7 @@
                             <label class="am-form-label am-u-md-3">手机号</label>
                             <div class="am-u-md-9">
                                 <form:input class="form-control" id="phone" path="phone" type="text" placeholder="请输入手机号"/>
-                                <form:errors path="phone" cssClass="error"/>
+                                <form:errors path="phone" cssClass="form-error"/>
                             </div>
                         </div>
 
@@ -81,7 +57,7 @@
                             <label class="am-form-label am-u-md-3">密码</label>
                             <div class="am-u-md-9">
                                 <form:password class="form-control" path="password" placeholder="请输入密码"/>
-                                <form:errors path="password" cssClass="error"/>
+                                <form:errors path="password" cssClass="form-error"/>
                             </div>
                         </div>
                         <div class="am-form-group">

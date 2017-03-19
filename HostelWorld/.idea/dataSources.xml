@@ -79,7 +79,7 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="MySQL - hostelworld@localhost" uuid="0a26c789-3399-4f3c-b942-d3b323862fa1">
+    <data-source source="LOCAL" name="MySQL - hostelworld@localhost" uuid="424d3fb4-021d-4dfd-b4b1-8ee21e415702">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
