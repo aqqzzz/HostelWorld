@@ -1,8 +1,10 @@
 package edu.nju.hostelWorld.controller;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
+import edu.nju.hostelWorld.entity.CustLevel;
 import edu.nju.hostelWorld.entity.Customer;
 import edu.nju.hostelWorld.service.CustomerService;
+import org.dom4j.rule.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -42,7 +44,12 @@ public class CustomerController {
     }
 
     @RequestMapping(value = "/dashboard", method = RequestMethod.GET)
-    public String getUserDash(){
+    public String getUserDash(Model model, HttpSession session){
+        int id = (Integer)session.getAttribute("cust_id");
+        Customer customer = customerService.getCustomerById(id);
+        CustLevel level = customerService.getCustLevel(customer.getConsumpTotal());
+        model.addAttribute("customer", customer);
+        model.addAttribute("custLevel", level);
         return "customer/dashboard";
     }
 
@@ -69,5 +76,54 @@ public class CustomerController {
             model.addAttribute("update","fail");
         }
        return "customer/info";
+    }
+
+    @RequestMapping(value = "/validate", method = RequestMethod.GET)
+    public String getValidate(HttpSession session, Model model){
+        int id = (Integer)session.getAttribute("cust_id");
+        Customer cust = customerService.getCustomerById(id);
+        model.addAttribute("customer", cust);
+        return "customer/validate";
+    }
+
+    @RequestMapping(value = "/recharge",method = RequestMethod.GET)
+    public String getRecharge(HttpSession session, Model model){
+        int id = (Integer)session.getAttribute("cust_id");
+        Customer cust = customerService.getCustomerById(id);
+        model.addAttribute("customer", cust);
+        return "customer/recharge";
+    }
+
+    @RequestMapping(value = "/recharge",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> recharge(HttpSession session, double money, String password){
+        int id = (Integer)session.getAttribute("cust_id");
+        Map<String, Object> map = customerService.recharge(id, money, password);
+        if(!(Boolean) map.get("success")){
+            if (map.get("error").equals("password")) {
+                map.put("error", "密码输入错误！");
+            }
+        }
+        return map;
+    }
+
+    @RequestMapping(value = "/point", method = RequestMethod.GET)
+    public String getPoint(HttpSession session, Model model){
+        int id = (Integer)session.getAttribute("cust_id");
+        Customer cust = customerService.getCustomerById(id);
+        CustLevel level = customerService.getCustLevel(cust.getConsumpTotal());
+        model.addAttribute("customer", cust);
+        model.addAttribute("custLevel", level);
+        return "customer/point";
+    }
+
+    @RequestMapping(value = "/point", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> exchangePoint(HttpSession session, int point){
+        int id = (Integer)session.getAttribute("cust_id");
+        Map<String, Object> map = customerService.exchangePoints(id, point);
+
+        return map;
+
     }
 }

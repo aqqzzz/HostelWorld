@@ -1,8 +1,10 @@
 package edu.nju.hostelWorld.service.impl;
 
 import edu.nju.hostelWorld.dao.BankAccountDAO;
+import edu.nju.hostelWorld.dao.CustLevelDAO;
 import edu.nju.hostelWorld.dao.CustomerDAO;
 import edu.nju.hostelWorld.entity.BankAccount;
+import edu.nju.hostelWorld.entity.CustLevel;
 import edu.nju.hostelWorld.entity.Customer;
 import edu.nju.hostelWorld.service.CustomerService;
 import edu.nju.hostelWorld.util.DataUtil;
@@ -13,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -25,6 +28,8 @@ public class CustomerServiceImpl implements CustomerService{
     CustomerDAO customerDAO;
     @Autowired
     BankAccountDAO bankAccountDAO;
+    @Autowired
+    CustLevelDAO custLevelDAO;
 
     public Map<String, Object> register(Customer customer) {
         Map<String,Object> map = new HashMap<String, Object>();
@@ -123,19 +128,61 @@ public class CustomerServiceImpl implements CustomerService{
 
             }
             customerDAO.updateBankAccountById(ba, id);
-//            if(isFlushed==null){
-//                map.put("success",false);
-//                map.put("error","update");//更新失败
-//            }else{
-                map.put("success",true);
-                map.put("cust_id", customer.getUserid());
-                map.put("cust_phone", customer.getPhone());
-//            }
+            map.put("success",true);
+            map.put("cust_id", customer.getUserid());
+            map.put("cust_phone", customer.getPhone());
 
         }
 
 
 
         return map;
+    }
+
+    public CustLevel getCustLevel(double consump){
+        List<CustLevel> levels = custLevelDAO.findAll();
+        CustLevel level = null;
+        for(int i = 0; i < levels.size(); i++){
+            CustLevel tmp = levels.get(i);
+            if(tmp.getConsumpTotal()>consump){
+                break;
+            }
+            level = tmp;
+        }
+        return level;
+    }
+
+    public Map<String, Object> recharge(int id, double money, String password) {
+        Map<String, Object> map = new HashMap<String, Object>();
+        Customer cust = customerDAO.findByUserid(id);
+        if(!password.equals(cust.getPassword())){
+            map.put("success", false);
+            map.put("error","password");//密码输入错误
+        }else{
+            double balance = cust.getBalance();
+            balance = balance+money;
+            customerDAO.updateBalance(balance,id);
+            if(money>=1000&&cust.getStatus()==DataUtil.NOT_ACTIVITED){
+                customerDAO.updateStatus(DataUtil.ACTIVITED, id);
+            }
+            map.put("success", true);
+        }
+        return map;
+    }
+
+    public Map<String, Object> exchangePoints(int id, int point) {
+        Map<String, Object> map = new HashMap<String, Object>();
+        Customer cust = customerDAO.findByUserid(id);
+        int originPoints = cust.getPoint();
+        int i = customerDAO.updatePoints(originPoints-point,id);
+
+        double balance = cust.getBalance()+point/100;
+        int j = customerDAO.updateBalance(balance, id);
+
+        map.put("points",i);
+        map.put("balance", j);
+        map.put("success",true);
+        return map;
+
     }
 }

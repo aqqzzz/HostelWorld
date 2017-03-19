@@ -35,4 +35,18 @@ public interface CustomerDAO extends JpaRepository<Customer, Long> {
     @Query("update Customer as c set c.bankAccountByBankCard=?1 where c.userid=?2")
     int updateBankAccountById(BankAccount bankAccount, int id);
 
+    @Modifying
+    @Transactional
+    @Query("update Customer as c set c.balance=?1 where c.userid=?2")
+    int updateBalance(double balance, int id);
+
+    @Modifying
+    @Transactional
+    @Query("update Customer as c set c.status=?1 where c.userid=?2")
+    int updateStatus(Byte status, int id);
+
+    @Modifying
+    @Transactional
+    @Query("update Customer as c set c.point=?1 where c.userid=?2")
+    int updatePoints(int point, int id);
 }
