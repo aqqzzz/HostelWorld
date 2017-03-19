@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e79e23d3-8bda-4fd9-ab10-549535350916" name="Default" comment="喵的用户登录注册终于搞完了&#10;呃。。。还有提示信息的css样式没写">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/CustLevelDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/customer/point.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/customer/recharge.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/customer/validate.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/controller/CustomerController.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/controller/CustomerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/controller/CustomerController.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/controller/CustomerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.class" />
+    <list default="true" id="e79e23d3-8bda-4fd9-ab10-549535350916" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/dao/BankAccountDAO.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/dao/BankAccountDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/dao/CustomerDAO.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/dao/CustomerDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/service/CustomerService.class" afterPath="$PROJECT_DIR$/target/HostelWorld/WEB-INF/classes/edu/nju/hostelWorld/service/CustomerService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/dao/BankAccountDAO.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/dao/BankAccountDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/dao/CustomerDAO.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/dao/CustomerDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/service/CustomerService.class" afterPath="$PROJECT_DIR$/target/classes/edu/nju/hostelWorld/service/CustomerService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/CustomerController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/controller/CustomerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/BankAccountDAO.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/BankAccountDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/CustomerDAO.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/dao/CustomerDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/CustomerService.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/CustomerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nju/hostelWorld/service/impl/CustomerServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/customer/dashboard.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/customer/dashboard.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/assets/css/style.css" afterPath="$PROJECT_DIR$/target/HostelWorld/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/HostelWorld/pages/customer/dashboard.jsp" afterPath="$PROJECT_DIR$/target/HostelWorld/pages/customer/dashboard.jsp" />
     </list>
     <ignored path="HostelWorld.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1420,7 +1409,7 @@
       <workItem from="1489749800296" duration="11513000" />
       <workItem from="1489799751352" duration="10179000" />
       <workItem from="1489836775857" duration="9371000" />
-      <workItem from="1489885827813" duration="38095000" />
+      <workItem from="1489885827813" duration="38151000" />
     </task>
     <task id="LOCAL-00001" summary="改了一下登陆的页面&#10;">
       <created>1489106650911</created>
@@ -1436,11 +1425,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489766568196</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="会员充值和会员积分兑换">
+      <created>1489940381546</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1489940381546</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221313000" />
+    <option name="totallyTimeSpent" value="221369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1528,7 +1524,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="改了一下登陆的页面&#10;" />
     <MESSAGE value="喵的用户登录注册终于搞完了&#10;呃。。。还有提示信息的css样式没写" />
-    <option name="LAST_COMMIT_MESSAGE" value="喵的用户登录注册终于搞完了&#10;呃。。。还有提示信息的css样式没写" />
+    <MESSAGE value="会员充值和会员积分兑换" />
+    <option name="LAST_COMMIT_MESSAGE" value="会员充值和会员积分兑换" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
