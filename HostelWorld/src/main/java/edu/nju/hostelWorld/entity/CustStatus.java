@@ -1,7 +1,7 @@
 package edu.nju.hostelWorld.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created by 张文玘 on 2017/3/10.

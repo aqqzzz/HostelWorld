@@ -43,7 +43,7 @@
                     <div class="error">
 
                     </div>
-                    <form:form modelAttribute="customerLogin" action="${path}/auth/login" class="am-form am-form-horizontal" id="user-login-form">
+                    <form:form modelAttribute="customerLogin" action="${path}/auth/customer/login" class="am-form am-form-horizontal" id="user-login-form">
 
                         <div class="am-form-group">
                             <label class="am-form-label am-u-md-3">手机号</label>

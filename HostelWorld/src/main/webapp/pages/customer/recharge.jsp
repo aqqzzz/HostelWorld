@@ -89,6 +89,7 @@
 
     });
     function submit(){
+
         $.ajax({
             type:'post',
             url:'/customer/recharge',

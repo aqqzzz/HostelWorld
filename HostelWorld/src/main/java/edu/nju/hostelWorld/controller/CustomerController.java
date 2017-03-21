@@ -126,4 +126,13 @@ public class CustomerController {
         return map;
 
     }
+
+    @RequestMapping(value = "/stop", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> stop(HttpSession session){
+        int id= (Integer)session.getAttribute("cust_id");
+        Map<String,Object> map = customerService.stop(id);
+
+        return map;
+    }
 }

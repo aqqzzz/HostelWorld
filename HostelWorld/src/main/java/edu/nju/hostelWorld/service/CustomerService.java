@@ -23,4 +23,6 @@ public interface CustomerService {
     public Map<String, Object> recharge(int id, double money, String password);
 
     public Map<String, Object> exchangePoints(int id, int point);
+
+    public Map<String, Object> stop(int id);
 }

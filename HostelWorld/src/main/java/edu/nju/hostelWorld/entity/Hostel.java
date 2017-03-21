@@ -9,13 +9,13 @@ import java.sql.Date;
 @Entity
 public class Hostel {
     private int id;
-    private String name;
-    private String password;
+    private String hostName;
+    private String hostPassword;
     private String discription;
     private String location;
     private Date createTime;
-    private String phone;
-    private BankAccount bankAccountByBankCard;
+    private String hostTel;
+    private BankAccount hostBankAccountByBankCard;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -29,22 +29,22 @@ public class Hostel {
 
     @Basic
     @Column(name = "name", nullable = false, length = 0)
-    public String getName() {
-        return name;
+    public String getHostName() {
+        return hostName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setHostName(String name) {
+        this.hostName = name;
     }
 
     @Basic
     @Column(name = "password", nullable = false, length = 0)
-    public String getPassword() {
-        return password;
+    public String getHostPassword() {
+        return hostPassword;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setHostPassword(String password) {
+        this.hostPassword = password;
     }
 
     @Basic
@@ -79,12 +79,12 @@ public class Hostel {
 
     @Basic
     @Column(name = "phone", nullable = true, length = 0)
-    public String getPhone() {
-        return phone;
+    public String getHostTel() {
+        return hostTel;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setHostTel(String phone) {
+        this.hostTel = phone;
     }
 
     @Override
@@ -95,12 +95,12 @@ public class Hostel {
         Hostel hostel = (Hostel) o;
 
         if (id != hostel.id) return false;
-        if (name != null ? !name.equals(hostel.name) : hostel.name != null) return false;
-        if (password != null ? !password.equals(hostel.password) : hostel.password != null) return false;
+        if (hostName != null ? !hostName.equals(hostel.hostName) : hostel.hostName != null) return false;
+        if (hostPassword != null ? !hostPassword.equals(hostel.hostPassword) : hostel.hostPassword != null) return false;
         if (discription != null ? !discription.equals(hostel.discription) : hostel.discription != null) return false;
         if (location != null ? !location.equals(hostel.location) : hostel.location != null) return false;
         if (createTime != null ? !createTime.equals(hostel.createTime) : hostel.createTime != null) return false;
-        if (phone != null ? !phone.equals(hostel.phone) : hostel.phone != null) return false;
+        if (hostTel != null ? !hostTel.equals(hostel.hostTel) : hostel.hostTel != null) return false;
 
         return true;
     }
@@ -108,22 +108,22 @@ public class Hostel {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (hostName != null ? hostName.hashCode() : 0);
+        result = 31 * result + (hostPassword != null ? hostPassword.hashCode() : 0);
         result = 31 * result + (discription != null ? discription.hashCode() : 0);
         result = 31 * result + (location != null ? location.hashCode() : 0);
         result = 31 * result + (createTime != null ? createTime.hashCode() : 0);
-        result = 31 * result + (phone != null ? phone.hashCode() : 0);
+        result = 31 * result + (hostTel != null ? hostTel.hashCode() : 0);
         return result;
     }
 
     @ManyToOne
     @JoinColumn(name = "bank_card", referencedColumnName = "id")
-    public BankAccount getBankAccountByBankCard() {
-        return bankAccountByBankCard;
+    public BankAccount getHostBankAccountByBankCard() {
+        return hostBankAccountByBankCard;
     }
 
-    public void setBankAccountByBankCard(BankAccount bankAccountByBankCard) {
-        this.bankAccountByBankCard = bankAccountByBankCard;
+    public void setHostBankAccountByBankCard(BankAccount bankAccountByBankCard) {
+        this.hostBankAccountByBankCard = bankAccountByBankCard;
     }
 }

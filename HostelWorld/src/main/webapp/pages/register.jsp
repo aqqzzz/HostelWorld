@@ -18,6 +18,11 @@
 </jsp:include>
 <body>
 <jsp:include page="common/navbar.jsp"/>
+<style>
+    .form-group{
+        overflow: auto;
+    }
+</style>
 <div class="header">
     <div class="am-g">
         <h1>Hostel World</h1>
@@ -39,7 +44,7 @@
             <div class="am-tabs-bd">
                 <div class="am-tab-panel am-active" id="user-content">
                     <div class="register-form">
-                        <form:form modelAttribute="customerNew" action="${path}/auth/register" class="am-form am-form-horizontal" id="user-register-form">
+                        <form:form modelAttribute="customerNew" action="${path}/auth/customer/register" class="am-form am-form-horizontal" id="user-register-form">
                             <div class="am-form-group">
                                 <label class="am-u-md-3 am-form-label vertical-center" for="phone">手机号：</label>
                                 <div class="am-u-md-9">
@@ -103,9 +108,67 @@
                 <div class="am-tab-panel" id="hostel-content">
 
                     <div class="register-form">
-                        <form class="form" id="hostel-register-form" >
+                        <form:form modelAttribute="hostelNew" action="${path}/auth/hostel/register" class="form form-horizental" id="hostel-register-form" >
+                            <h2>客栈信息</h2>
 
-                        </form>
+                            <div class="form-group">
+                                <div class="col-md-3 control-label right-aligned">客栈名称</div>
+                                <div class="col-md-9">
+                                    <form:input path="hostName" class="form-control" placeholder="客栈名称"/>
+                                    <form:errors path="hostName" cssClass="form-error"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-3 control-label right-aligned">登录密码</div>
+                                <div class="col-md-9">
+                                    <form:password path="hostPassword" class="form-control" id="hostPassword" placeholder="请输入您的注册密码"/>
+                                    <form:errors path="hostPassword" cssClass="form-error"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-3 control-label right-aligned">再次输入密码</div>
+                                <div class="col-md-9">
+                                    <input type="password" name="passwordAgain" class="form-control" id="hostPasswordAgain" placeholder="请再次输入您的密码"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-3 control-label right-aligned">绑定银行卡号</div>
+                                <div class="col-md-9">
+                                    <form:input path="hostBankAccountByBankCard.id" class="form-control" placeholder="请输入您的工作银行卡号"/>
+                                    <form:errors path="hostBankAccountByBankCard.id" cssClass="form-error"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-3 control-label right-aligned">客栈电话</div>
+                                <div class="col-md-9">
+                                    <form:input path="hostTel" class="form-control" placeholder="请输入客栈的联系电话"/>
+                                    <form:errors path="hostTel" cssClass="form-error"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-3 control-label right-aligned">客栈地址</div>
+                                <div class="col-md-9">
+                                    <form:input path="location" class="form-control" placeholder="请输入客栈地址"/>
+                                    <form:errors path="location" cssClass="form-error"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-3 control-label right-aligned">描述</div>
+                                <div class="col-md-9">
+                                    <form:textarea path="discription" class="form-control" placeholder="请简要介绍一下您的客栈（200字以内）"/>
+                                    <form:errors path="discription" cssClass="form-error"/>
+                                </div>
+                            </div>
+
+                            <hr>
+                            <input type="submit" class="btn btn-primary btn-block" value="注册"/>
+                        </form:form>
                         <hr>
                     </div>
                 </div>

@@ -9,9 +9,9 @@ import javax.persistence.*;
 @Table(name = "hostel_keeper", schema = "hostelworld")
 public class HostelKeeper {
     private int id;
-    private String name;
-    private String idCard;
-    private String phone;
+    private String keeperName;
+    private String keeperIdCard;
+    private String keeperPhone;
     private Hostel hostelByHostelId;
 
     @Id
@@ -26,32 +26,32 @@ public class HostelKeeper {
 
     @Basic
     @Column(name = "name", nullable = true, length = 0)
-    public String getName() {
-        return name;
+    public String getKeeperName() {
+        return keeperName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setKeeperName(String name) {
+        this.keeperName = name;
     }
 
     @Basic
     @Column(name = "id_card", nullable = true, length = 0)
-    public String getIdCard() {
-        return idCard;
+    public String getKeeperIdCard() {
+        return keeperIdCard;
     }
 
-    public void setIdCard(String idCard) {
-        this.idCard = idCard;
+    public void setKeeperIdCard(String idCard) {
+        this.keeperIdCard = idCard;
     }
 
     @Basic
     @Column(name = "phone", nullable = true, length = 0)
-    public String getPhone() {
-        return phone;
+    public String getKeeperPhone() {
+        return keeperPhone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setKeeperPhone(String phone) {
+        this.keeperPhone = phone;
     }
 
     @Override
@@ -62,9 +62,9 @@ public class HostelKeeper {
         HostelKeeper that = (HostelKeeper) o;
 
         if (id != that.id) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (idCard != null ? !idCard.equals(that.idCard) : that.idCard != null) return false;
-        if (phone != null ? !phone.equals(that.phone) : that.phone != null) return false;
+        if (keeperName != null ? !keeperName.equals(that.keeperName) : that.keeperName != null) return false;
+        if (keeperIdCard != null ? !keeperIdCard.equals(that.keeperIdCard) : that.keeperIdCard != null) return false;
+        if (keeperPhone != null ? !keeperPhone.equals(that.keeperPhone) : that.keeperPhone != null) return false;
 
         return true;
     }
@@ -72,9 +72,9 @@ public class HostelKeeper {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (idCard != null ? idCard.hashCode() : 0);
-        result = 31 * result + (phone != null ? phone.hashCode() : 0);
+        result = 31 * result + (keeperName != null ? keeperName.hashCode() : 0);
+        result = 31 * result + (keeperIdCard != null ? keeperIdCard.hashCode() : 0);
+        result = 31 * result + (keeperPhone != null ? keeperPhone.hashCode() : 0);
         return result;
     }
 
