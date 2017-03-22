@@ -1,10 +1,7 @@
 package edu.nju.hostelWorld.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.sql.Date;
+import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by 张文玘 on 2017/3/10.
@@ -15,6 +12,7 @@ public class Apply {
     private Date createTime;
     private Byte type;
     private Byte status;
+    private Hostel hostelByHostelId;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -71,6 +69,7 @@ public class Apply {
         return true;
     }
 
+
     @Override
     public int hashCode() {
         int result = id;
@@ -78,5 +77,15 @@ public class Apply {
         result = 31 * result + (type != null ? type.hashCode() : 0);
         result = 31 * result + (status != null ? status.hashCode() : 0);
         return result;
+    }
+
+    @ManyToOne
+    @JoinColumn(name="hostel_id",referencedColumnName = "id")
+    public Hostel getHostelByHostelId() {
+        return hostelByHostelId;
+    }
+
+    public void setHostelByHostelId(Hostel hostelById) {
+        this.hostelByHostelId = hostelById;
     }
 }

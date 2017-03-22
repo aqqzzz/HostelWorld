@@ -48,7 +48,6 @@ public class Customer {
     @Basic
     @Column(name = "phone", nullable = true, length = 0)
     @NotEmpty(message="请输入您的手机号")
-    @Pattern(regexp = "^\\d{11}$", message = "手机号格式错误！")
     public String getPhone() {
         return phone;
     }

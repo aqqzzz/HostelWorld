@@ -9,12 +9,23 @@ import java.util.regex.Pattern;
  */
 public class DataUtil {
 
+    //会员状态
     public static byte NOT_ACTIVITED = 0;
     public static byte ACTIVITED = 1;
     public static byte PAUSE = 2;
     public static byte STOP = 3;
 
+    //银行卡初始金额
     public static double INITIAL_BALANCE=1000000000;
+
+    //审批状态
+    public static byte WAIT = 0;
+    public static byte APPROVED = 1;//通过审批
+    public static byte NOT_APPROVED = 2;//未通过审批
+
+    //申请类型
+    public static byte CREATE = 0; //开店申请
+    public static byte EDIT = 1; //修改店铺信息申请
 
     public static boolean isPhoneNum(String phoneNumber){
         Pattern pattern = Pattern.compile("^\\d{11}$");

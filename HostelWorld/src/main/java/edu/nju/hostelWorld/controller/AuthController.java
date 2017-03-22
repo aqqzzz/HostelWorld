@@ -1,17 +1,20 @@
 package edu.nju.hostelWorld.controller;
 
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import edu.nju.hostelWorld.entity.Customer;
 import edu.nju.hostelWorld.entity.Hostel;
 import edu.nju.hostelWorld.service.CustomerService;
 import edu.nju.hostelWorld.service.HostelService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.beans.propertyeditors.CustomNumberEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -39,10 +42,15 @@ public class AuthController {
 
     @RequestMapping(value = "/customer/login",method = RequestMethod.POST)
     public String login(@Valid @ModelAttribute("customerLogin")Customer customer, BindingResult bindingResult, HttpSession session){
-        Map<String, Object> map = customerService.login(customer.getPhone(),customer.getPassword());
+
+        if(customer.getPhone().equals("admin")){
+            bindingResult.rejectValue("phone","phone.error","手机号错误！");
+        }
+
         if(bindingResult.hasErrors()){
             return "login";
         }
+        Map<String, Object> map = customerService.login(customer.getPhone(),customer.getPassword());
 
         if((Boolean)map.get("success")){
             session.setAttribute("cust_id", map.get("cust_id"));
@@ -95,21 +103,56 @@ public class AuthController {
     }
 
     @RequestMapping(value = "/hostel/register", method = RequestMethod.POST)
-    public String hostelRegister(@Valid @ModelAttribute("hostelNew")Hostel hostel, BindingResult bindingResult, HttpSession session){
-//        if(bindingResult.hasErrors()){
-//            return "register";
-//        }
+    public String hostelRegister(@Valid @ModelAttribute("hostelNew")Hostel hostel, BindingResult bindingResult, HttpSession session, Model model){
+        if(bindingResult.hasErrors()){
+            model.addAttribute("customerNew",new Customer());
+            return "register";
+        }
         Map<String, Object> map = hostelService.register(hostel);
         if(!(Boolean) map.get("success")){
             if(map.get("error").equals("bank_account")){
-                bindingResult.rejectValue("hostBankAccountByBankCard.id","银行卡已被绑定！");
+                bindingResult.rejectValue("hostBankAccountByBankCard.id","hostBankAccountByBankCard.id.error","银行卡已被绑定！");
             }
-//            return "register";
+            model.addAttribute("customerNew",new Customer());
+            return "register";
         }else{
             session.setAttribute("host_id", map.get("host_id"));
             return "hostel/home";
         }
-        return "hostel/home";
     }
 
+    @RequestMapping(value = "/hostel/login")
+    public String hostelLogin(@Valid @ModelAttribute("hostelLogin")Hostel hostel, BindingResult bindingResult, HttpSession session, Model model){
+        System.out.println("___-------------------------"+hostel.getId());
+
+        if(bindingResult.hasErrors()){
+            model.addAttribute("customerLogin",new Customer());
+            return "login";
+        }
+
+        Map<String,Object> map = hostelService.login(hostel.getId(), hostel.getHostPassword());
+        if((Boolean) map.get("success")){
+            session.setAttribute("host_id", hostel.getId());
+            return "hostel/home";
+        }else{
+            if(map.get("error").equals("id")){
+                bindingResult.rejectValue("id","id.error","登陆id号错误");
+            }else if(map.get("error").equals("password")){
+                bindingResult.rejectValue("hostPassword", "hostPassword.error", "登录密码错误");
+            }
+            model.addAttribute("customerLogin", new Customer());
+            return "login";
+        }
+    }
+
+    @RequestMapping(value="/manage/login", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> managerLogin(String hwname, String password, HttpSession session){
+        Map<String, Object> map = customerService.login(hwname, password);
+        if((Boolean) map.get("success")){
+            session.setAttribute("manage_id", map.get("cust_id"));
+            session.setAttribute("manage_name",hwname);
+        }
+        return map;
+    }
 }

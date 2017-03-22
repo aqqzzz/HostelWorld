@@ -11,4 +11,8 @@ public interface HostelService {
 
     public Map<String, Object> register(Hostel hostel);
 
+    public Map<String, Object> login(int id, String password);
+
+    public Hostel getHostelInfo(int id);
+
 }

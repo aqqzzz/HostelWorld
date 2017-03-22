@@ -27,17 +27,6 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
 
-//    @RequestMapping(value = "/supplyInfo", method = RequestMethod.GET)
-//    public String getSupplyInfo(Model model){
-//        model.addAttribute("customerInfo",new Customer());
-//        return "/customer/supplyInfo";
-//    }
-//
-//    @RequestMapping(value = "/supplyInfo", method = RequestMethod.POST)
-//    public String supplyInfo(@ModelAttribute("customerInfo") Customer customer, Model model){
-//        return "";
-//    }
-
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String getUserHome(){
         return "customer/home";

@@ -16,6 +16,12 @@
 <jsp:include page="common/includeHeader.jsp">
     <jsp:param name="title" value="登陆"/>
 </jsp:include>
+
+<style>
+    .form-group{
+        overflow: auto;
+    }
+</style>
 <body>
 <jsp:include page="common/navbar.jsp"/>
 <div class="header">
@@ -70,17 +76,32 @@
             </div>
             <div class="am-tab-panel" id="hostel-content">
                 <div class="login-form">
-                    <form class="form" id="hostel-login-form" >
+                    <form:form modelAttribute="hostelLogin" action="${path}/auth/hostel/login" class="form" id="hostel-login-form" >
                         <div class="form-group">
-                            <input class="form-control" name="hostelId" type="text" placeholder="请输入您的客栈id"/>
+                            <div class="col-md-3 right-aligned">
+                                <label class="control-label">客栈id</label>
+                            </div>
+                            <div class="col-md-9">
+                                <form:input class="form-control" path="id" placeholder="请输入您的客栈id" value=""/>
+                                <form:errors path="id" cssClass="form-error"/>
+                            </div>
+
+
                         </div>
                         <div class="form-group">
-                            <input class="form-control" name="password" type="password" placeholder="请输入密码" />
+                            <div class="col-md-3 right-aligned">
+                                <label class="control-label">密码</label>
+                            </div>
+                            <div class="col-md-9">
+                                <form:password class="form-control" path="hostPassword" placeholder="请输入密码" />
+                                <form:errors path="hostPassword" cssClass="form-error"/>
+                            </div>
+
                         </div>
                         <div class="form-group">
                             <input class="form-control btn btn-primary" type="submit" value="登陆"/>
                         </div>
-                    </form>
+                    </form:form>
                     <hr>
                 </div>
 
@@ -89,13 +110,25 @@
             <div class="am-tab-panel" id="hw-content">
                 <form class="form" id="hw-login-form">
                     <div class="form-group">
-                        <input class="form-control" name="hwname" type="text" placeholder="请输入用户名"/>
+                        <div class="col-md-3 right-aligned">
+                            <label class="control-label">用户名</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input class="form-control" name="hwname" type="text" placeholder="请输入用户名"/>
+                        </div>
+
                     </div>
                     <div class="form-group">
-                        <input class="form-control" name="password" type="password" placeholder="请输入密码"/>
+                        <div class="col-md-3 right-aligned">
+                            <label class="control-label">密码</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input class="form-control" name="password" type="password" placeholder="请输入密码"/>
+                        </div>
+
                     </div>
                     <div class="form-group">
-                        <input class="form-control btn btn-primary" type="submit" value="登陆" />
+                        <input class="form-control btn btn-primary" type="submit" onclick="managerLogin(event)" value="登陆" />
                     </div>
                 </form>
             </div>
@@ -104,4 +137,25 @@
 </div>
 </div>
 </body>
+<script>
+    function managerLogin(e){
+        e.preventDefault();
+
+        $.ajax({
+            type:'post',
+            url:'/auth/manage/login',
+            data:$('#hw-login-form').serialize(),
+            success: function(result){
+                if(result['success']){
+                    window.location.href="/manage";
+                }else{
+                    alert(JSON.stringify(result));
+                }
+            },
+            error: function(result){
+                alert(JSON.stringify(result));
+            }
+        });
+    }
+</script>
 </html>

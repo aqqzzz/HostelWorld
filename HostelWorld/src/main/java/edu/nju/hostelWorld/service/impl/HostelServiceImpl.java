@@ -1,14 +1,19 @@
 package edu.nju.hostelWorld.service.impl;
 
+import edu.nju.hostelWorld.dao.ApplyDAO;
 import edu.nju.hostelWorld.dao.BankAccountDAO;
 import edu.nju.hostelWorld.dao.HostelDAO;
+import edu.nju.hostelWorld.entity.Apply;
 import edu.nju.hostelWorld.entity.BankAccount;
 import edu.nju.hostelWorld.entity.Hostel;
 import edu.nju.hostelWorld.service.HostelService;
 import edu.nju.hostelWorld.util.DataUtil;
+import javafx.scene.chart.PieChart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,7 +28,10 @@ public class HostelServiceImpl implements HostelService{
     HostelDAO hostelDAO;
     @Autowired
     BankAccountDAO bankAccountDAO;
+    @Autowired
+    ApplyDAO applyDAO;
 
+    //开店申请，还没有写总经理审批
     public Map<String, Object> register(Hostel hostel) {
         Map<String,Object> map = new HashMap<String,Object>();
         String accountId = hostel.getHostBankAccountByBankCard().getId();
@@ -42,7 +50,16 @@ public class HostelServiceImpl implements HostelService{
                 id = DataUtil.getRandomId();
             }
             hostel.setId(id);
+
             hostelDAO.save(hostel);
+
+            Apply apply = new Apply();
+            apply.setStatus(DataUtil.WAIT);
+            apply.setCreateTime(Calendar.getInstance().getTime());
+            apply.setHostelByHostelId(hostel);
+            apply.setType(DataUtil.CREATE);
+
+            applyDAO.save(apply);
 
             map.put("success", true);
             map.put("host_id",id);
@@ -52,4 +69,28 @@ public class HostelServiceImpl implements HostelService{
 
 
     }
+
+    public Map<String, Object> login(int id, String password) {
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        Hostel hostel = hostelDAO.findOne(id);
+        if(hostel==null){
+            map.put("success",false);
+            map.put("error","id"); //登陆id错误
+        }else if(!hostel.getHostPassword().equals(password)){
+            map.put("success",false);
+            map.put("error","password");//登录密码错误
+        }else{
+            map.put("success",true);
+        }
+        return map;
+
+    }
+
+    public Hostel getHostelInfo(int id) {
+        Hostel hostel = hostelDAO.findOne(id);
+        return hostel;
+    }
+
+
 }

@@ -1,6 +1,10 @@
 package edu.nju.hostelWorld.entity;
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
 import java.sql.Date;
 
 /**
@@ -39,6 +43,7 @@ public class Hostel {
 
     @Basic
     @Column(name = "password", nullable = false, length = 0)
+    @NotEmpty(message = "请输入您的密码")
     public String getHostPassword() {
         return hostPassword;
     }

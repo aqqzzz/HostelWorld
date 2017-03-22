@@ -18,6 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
     <link rel="stylesheet" href="<%=basePath%>assets/vendor/bootStrap/css/bootstrap.min.css"/>
 
     <link rel="stylesheet" href="<%=basePath%>assets/css/amazeui.css"/>
@@ -25,6 +26,8 @@
     <link rel="stylesheet" href="<%=basePath%>assets/css/amaze/amazeui.flat.css"/>
     <link rel="stylesheet" href="<%=basePath%>assets/css/amaze/amazeui.flat.min.css"/>
 
+
+    <link rel="stylesheet" href="<%=basePath%>assets/vendor/font-awesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="<%=basePath%>assets/css/style.css?v=<%=new Date()%>"/>
 
 

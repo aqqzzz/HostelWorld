@@ -14,7 +14,7 @@
         </h1>
         <div class="am-collapse am-topbar-collapse">
             <c:choose>
-                <c:when test="${sessionScope.get('cust_id') == null }">
+                <c:when test="${sessionScope.get('cust_id') == null &&sessionScope.get('host_id')==null && sessionScope.get('manage_id')==null} ">
                     <div class="am-topbar-right">
                         <a type="button" class="am-btn am-btn-primary am-topbar-btn am-btn-sm" id="login-btn" href="/auth/login">登陆</a>
                     </div>
@@ -24,11 +24,13 @@
                     </div>
                 </c:when>
                 <c:otherwise>
-                    <ul class="am-nav am-nav-pills am-topbar-nav">
-                        <li><a href="/customer/home">首页</a></li>
-                        <li><a href="#">酒店</a></li>
-                        <li><a href="/customer/dashboard">我的</a></li>
-                    </ul>
+                    <c:if test="${sessionScope.get('cust_id')!=null}">
+                        <ul class="am-nav am-nav-pills am-topbar-nav">
+                            <li><a href="/customer/home">首页</a></li>
+                            <li><a href="#">酒店</a></li>
+                            <li><a href="/customer/dashboard">我的</a></li>
+                        </ul>
+                    </c:if>
                     <div class="am-topbar-right">
                         <a type="button" class="am-btn am-btn-primary am-topbar-btn am-btn-sm" id="logout-btn" href="/auth/logout">登出</a>
                     </div>
