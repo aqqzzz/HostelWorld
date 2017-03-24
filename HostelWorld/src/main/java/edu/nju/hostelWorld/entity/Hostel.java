@@ -19,6 +19,7 @@ public class Hostel {
     private String location;
     private Date createTime;
     private String hostTel;
+    private double balance;
     private BankAccount hostBankAccountByBankCard;
 
     @Id
@@ -90,6 +91,14 @@ public class Hostel {
 
     public void setHostTel(String phone) {
         this.hostTel = phone;
+    }
+
+    @Basic
+    @Column(name = "balance")
+    public double getBalance(){ return balance; }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     @Override

@@ -15,4 +15,6 @@ public interface HostelService {
 
     public Hostel getHostelInfo(int id);
 
+    public Map<String,Object> editHostelInfo(Hostel hostel);
+
 }

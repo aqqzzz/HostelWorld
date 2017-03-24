@@ -31,7 +31,7 @@ public class HostelServiceImpl implements HostelService{
     @Autowired
     ApplyDAO applyDAO;
 
-    //开店申请，还没有写总经理审批
+    //开店申请
     public Map<String, Object> register(Hostel hostel) {
         Map<String,Object> map = new HashMap<String,Object>();
         String accountId = hostel.getHostBankAccountByBankCard().getId();
@@ -74,9 +74,16 @@ public class HostelServiceImpl implements HostelService{
         Map<String, Object> map = new HashMap<String, Object>();
 
         Hostel hostel = hostelDAO.findOne(id);
+        Apply apply = applyDAO.findByHostelByHostelId(hostel);
         if(hostel==null){
             map.put("success",false);
             map.put("error","id"); //登陆id错误
+        }else if(apply.getStatus()==DataUtil.WAIT){
+            map.put("success",false);
+            map.put("error","wait");//申请中
+        }else if(apply.getStatus()==DataUtil.NOT_APPROVED){
+            map.put("success",false);
+            map.put("error","rejected");//未通过审批
         }else if(!hostel.getHostPassword().equals(password)){
             map.put("success",false);
             map.put("error","password");//登录密码错误
@@ -90,6 +97,12 @@ public class HostelServiceImpl implements HostelService{
     public Hostel getHostelInfo(int id) {
         Hostel hostel = hostelDAO.findOne(id);
         return hostel;
+    }
+
+    public Map<String,Object> editHostelInfo(Hostel hostel) {
+        Map<String,Object> map = new HashMap<String,Object>();
+        hostelDAO.save(hostel);
+        return map;
     }
 
 

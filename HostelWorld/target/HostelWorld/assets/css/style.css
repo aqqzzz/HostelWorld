@@ -27,13 +27,19 @@ body, html{
 
 }
 
+.text-center{
+    text-align: center;
+}
+
 .am-form-horizontal .am-form-label {
     padding-top: .4em;
 }
 
 .form-error {
-    color: #ff6666;
-    font-family:"Microsoft YaHei";
+    display:block;
+    margin-top:5px;
+    margin-bottom:5px;
+    padding: 5px;
 }
 
 .home-curtain{

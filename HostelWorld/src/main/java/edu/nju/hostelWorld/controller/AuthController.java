@@ -13,12 +13,15 @@ import org.springframework.beans.propertyeditors.CustomNumberEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -123,9 +126,9 @@ public class AuthController {
 
     @RequestMapping(value = "/hostel/login")
     public String hostelLogin(@Valid @ModelAttribute("hostelLogin")Hostel hostel, BindingResult bindingResult, HttpSession session, Model model){
-        System.out.println("___-------------------------"+hostel.getId());
 
         if(bindingResult.hasErrors()){
+
             model.addAttribute("customerLogin",new Customer());
             return "login";
         }
@@ -137,6 +140,10 @@ public class AuthController {
         }else{
             if(map.get("error").equals("id")){
                 bindingResult.rejectValue("id","id.error","登陆id号错误");
+            }else if(map.get("error").equals("wait")){
+                bindingResult.rejectValue("hostName","hostName.error","您的开店申请还在审批中，请耐心等待~");
+            }else if(map.get("error").equals("rejected")){
+                bindingResult.rejectValue("hostName","hostName.error", "您的开店申请被拒绝，请修改信息后重新申请！");
             }else if(map.get("error").equals("password")){
                 bindingResult.rejectValue("hostPassword", "hostPassword.error", "登录密码错误");
             }

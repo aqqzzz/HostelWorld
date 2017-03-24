@@ -11,8 +11,12 @@
     <jsp:param name="title" value="欢迎"/>
 </jsp:include>
 <body>
-<jsp:include page="../common/navbar.jsp"/>
-<h1>欢迎，${host_id}</h1>
+<div class="container-fluid">
+    <jsp:include page="../common/managerNavbar.jsp"/>
+    <div class="row">
+        <jsp:include page="detail/sidebar.jsp"/>
+    </div>
+</div>
 
 </body>
 </html>

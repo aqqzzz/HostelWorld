@@ -27,6 +27,7 @@ public class DataUtil {
     public static byte CREATE = 0; //开店申请
     public static byte EDIT = 1; //修改店铺信息申请
 
+
     public static boolean isPhoneNum(String phoneNumber){
         Pattern pattern = Pattern.compile("^\\d{11}$");
         Matcher matcher = pattern.matcher(phoneNumber);

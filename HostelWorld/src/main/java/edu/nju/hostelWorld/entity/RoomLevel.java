@@ -1,20 +1,29 @@
 package edu.nju.hostelWorld.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 /**
  * Created by 张文玘 on 2017/3/10.
  */
 @Entity
-@Table(name = "room_level", schema = "hostelworld", catalog = "")
+@Table(name = "room_level", schema = "hostelworld")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RoomLevel {
     private int id;
     private Byte roomType;
     private Integer roomCount;
+    private String roomName;
+    private int maxPeople;
+    private int startRoomNum;
+    private int endRoomNum;
     private String discription;
     private Hostel hostelByHostelId;
 
     @Id
+    @GeneratedValue
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;
@@ -42,6 +51,38 @@ public class RoomLevel {
 
     public void setRoomCount(Integer roomCount) {
         this.roomCount = roomCount;
+    }
+
+    @Basic
+    @Column(name = "room_name", nullable = true)
+    public String getRoomName(){return roomName;}
+
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
+    }
+
+    @Basic
+    @Column(name="max_people", nullable = true)
+    public int getMaxPeople(){return maxPeople;}
+
+    public void setMaxPeople(int maxPeople) {
+        this.maxPeople = maxPeople;
+    }
+
+    @Basic
+    @Column(name = "start_room_num", nullable = true)
+    public int getStartRoomNum(){ return startRoomNum; }
+
+    public void setStartRoomNum(int startRoomNum) {
+        this.startRoomNum = startRoomNum;
+    }
+
+    @Basic
+    @Column(name = "end_room_num", nullable = true)
+    public int getEndRoomNum(){ return endRoomNum; }
+
+    public void setEndRoomNum(int endRoomNum) {
+        this.endRoomNum = endRoomNum;
     }
 
     @Basic

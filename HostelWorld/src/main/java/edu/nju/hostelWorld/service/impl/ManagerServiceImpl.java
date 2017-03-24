@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Service;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,6 +32,7 @@ public class ManagerServiceImpl implements ManagerService{
 
     public Map<String, Object> acceptApply(int id) {
         applyDAO.updateApplyStatus(DataUtil.APPROVED, id);
+        hostelDAO.updateHostelCreateTime(Calendar.getInstance().getTime());
         Map<String, Object> map = new HashMap<String,Object>();
         map.put("success",true);
         return map;

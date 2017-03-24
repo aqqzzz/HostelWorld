@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="<%=basePath%>assets/css/amazeui.css"/>
     <link rel="stylesheet" href="<%=basePath%>assets/css/amazeui.min.css"/>
     <link rel="stylesheet" href="<%=basePath%>assets/css/amaze/amazeui.flat.css"/>
-    <link rel="stylesheet" href="<%=basePath%>assets/css/amaze/amazeui.flat.min.css"/>
 
 
     <link rel="stylesheet" href="<%=basePath%>assets/vendor/font-awesome/css/font-awesome.css"/>

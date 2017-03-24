@@ -1,6 +1,7 @@
 package edu.nju.hostelWorld.dao;
 
 import edu.nju.hostelWorld.entity.Apply;
+import edu.nju.hostelWorld.entity.Hostel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -18,5 +19,7 @@ public interface ApplyDAO extends JpaRepository<Apply, Integer> {
     @Transactional
     @Query("update Apply as a set a.status=?1 where a.id=?2")
     int updateApplyStatus(Byte status, int id);
+
+    Apply findByHostelByHostelId(Hostel hostel);
 
 }

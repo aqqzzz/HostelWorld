@@ -9,7 +9,19 @@
         metadata-complete="true"  version="3.0">
     <display-name>Archetype Created Web Application</display-name>
 
-    
+
+    <!--设置log4j配置文件-->
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath:log4j.properties</param-value>
+    </context-param>
+    <!--log4j的初始化类-->
+    <listener>
+        <listener-class>
+            org.springframework.web.util.Log4jConfigListener
+        </listener-class>
+    </listener>
+
     <!--配置spring-->
     <context-param>
         <param-name>contextConfigLocation</param-name>

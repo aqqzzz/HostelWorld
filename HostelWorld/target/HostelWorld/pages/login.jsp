@@ -55,7 +55,7 @@
                             <label class="am-form-label am-u-md-3">手机号</label>
                             <div class="am-u-md-9">
                                 <form:input class="form-control" id="phone" path="phone" type="text" placeholder="请输入手机号"/>
-                                <form:errors path="phone" cssClass="form-error"/>
+                                <form:errors path="phone" cssClass="alert alert-danger form-error"/>
                             </div>
                         </div>
 
@@ -63,7 +63,7 @@
                             <label class="am-form-label am-u-md-3">密码</label>
                             <div class="am-u-md-9">
                                 <form:password class="form-control" path="password" placeholder="请输入密码"/>
-                                <form:errors path="password" cssClass="form-error"/>
+                                <form:errors path="password" cssClass="alert alert-danger form-error"/>
                             </div>
                         </div>
                         <div class="am-form-group">
@@ -77,13 +77,17 @@
             <div class="am-tab-panel" id="hostel-content">
                 <div class="login-form">
                     <form:form modelAttribute="hostelLogin" action="${path}/auth/hostel/login" class="form" id="hostel-login-form" >
+                        
+                        <form:hidden path="hostName"/>
+                        <form:errors path="hostName" cssClass="alert alert-danger form-error text-center" /> <%--展示是否通过审批的页面--%>
+
                         <div class="form-group">
                             <div class="col-md-3 right-aligned">
                                 <label class="control-label">客栈id</label>
                             </div>
                             <div class="col-md-9">
                                 <form:input class="form-control" path="id" placeholder="请输入您的客栈id" value=""/>
-                                <form:errors path="id" cssClass="form-error"/>
+                                <form:errors path="id" cssClass="alert alert-danger form-error"/>
                             </div>
 
 
@@ -94,7 +98,7 @@
                             </div>
                             <div class="col-md-9">
                                 <form:password class="form-control" path="hostPassword" placeholder="请输入密码" />
-                                <form:errors path="hostPassword" cssClass="form-error"/>
+                                <form:errors path="hostPassword" cssClass="alert alert-danger form-error"/>
                             </div>
 
                         </div>
@@ -138,6 +142,7 @@
 </div>
 </body>
 <script>
+
     function managerLogin(e){
         e.preventDefault();
 
