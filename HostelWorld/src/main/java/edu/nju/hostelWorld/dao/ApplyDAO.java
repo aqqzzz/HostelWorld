@@ -8,6 +8,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by 张文玘 on 2017/3/22.
  */
@@ -20,6 +22,6 @@ public interface ApplyDAO extends JpaRepository<Apply, Integer> {
     @Query("update Apply as a set a.status=?1 where a.id=?2")
     int updateApplyStatus(Byte status, int id);
 
-    Apply findByHostelByHostelId(Hostel hostel);
+    List<Apply> findByHostelByHostelId(Hostel hostel);
 
 }

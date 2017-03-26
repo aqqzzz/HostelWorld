@@ -13,7 +13,7 @@ public interface HostelService {
 
     public Map<String, Object> login(int id, String password);
 
-    public Hostel getHostelInfo(int id);
+    public Map<String, Object> getHostelInfo(int id);
 
     public Map<String,Object> editHostelInfo(Hostel hostel);
 

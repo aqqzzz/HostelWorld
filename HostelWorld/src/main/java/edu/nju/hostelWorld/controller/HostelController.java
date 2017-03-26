@@ -43,7 +43,23 @@ public class HostelController {
     @RequestMapping(value = "/getInfo",method = RequestMethod.GET)
     public String getHostelInfo(HttpSession session, Model model){
         int id = (Integer)session.getAttribute("host_id");
-        Hostel hostel = hostelService.getHostelInfo(id);
+        Map<String,Object> map = hostelService.getHostelInfo(id);
+        Hostel hostel = (Hostel)map.get("hostel");
+
+        if((Boolean)map.get("success")){
+            model.addAttribute("success",true);
+            if(map.get("hint")!=null){
+                String hint = (String)map.get("hint");
+                if(hint.equals("rejected")){
+                    model.addAttribute("hint","rejected");//未通过审批
+                }else if(hint.equals("approved")){
+                    model.addAttribute("hint","approved");//通过审批
+                }
+            }
+        }else{
+            model.addAttribute("success",false);
+            model.addAttribute("error",map.get("error"));//正在审批中
+        }
 
         model.addAttribute("hostel",hostel);
         return "hostel/detail/hostelInfo";
@@ -52,8 +68,9 @@ public class HostelController {
     @RequestMapping(value = "/addRoomLevel",method = RequestMethod.POST)
     public String addRoomLevel(@RequestBody RoomLevel roomLevel, HttpSession session, Model model){
         int id = (Integer)session.getAttribute("host_id");
-        Hostel hostel = hostelService.getHostelInfo(id);
+        Map<String,Object> map = hostelService.getHostelInfo(id);
 
+        Hostel hostel = (Hostel)map.get("hostel");
         roomLevel.setHostelByHostelId(hostel);
 
         //新增
@@ -71,7 +88,9 @@ public class HostelController {
     @RequestMapping(value = "/saveRoomLevel",method = RequestMethod.POST)
     public String saveRoomLevel(@RequestBody RoomLevel roomLevel, HttpSession session, Model model){
         int id = (Integer)session.getAttribute("host_id");
-        Hostel hostel = hostelService.getHostelInfo(id);
+        Map<String,Object> map = hostelService.getHostelInfo(id);
+
+        Hostel hostel = (Hostel)map.get("hostel");
 
         roomLevel.setHostelByHostelId(hostel);
         //修改

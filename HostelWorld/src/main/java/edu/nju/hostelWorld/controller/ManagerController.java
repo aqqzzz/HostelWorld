@@ -45,7 +45,8 @@ public class ManagerController {
     @RequestMapping(value = "/apply/info",method = RequestMethod.GET)
     @ResponseBody
     public Map<String,Object> getHostelInfo(int hostelId){
-        Hostel hostel = hostelService.getHostelInfo(hostelId);
+        Map<String,Object> hostMap = hostelService.getHostelInfo(hostelId);
+        Hostel hostel = (Hostel)hostMap.get("hostel");
         Map<String, Object> map = new HashMap<String,Object>();
         if(hostel!=null){
             map.put("success",true);

@@ -32,7 +32,10 @@ public class ManagerServiceImpl implements ManagerService{
 
     public Map<String, Object> acceptApply(int id) {
         applyDAO.updateApplyStatus(DataUtil.APPROVED, id);
-        hostelDAO.updateHostelCreateTime(Calendar.getInstance().getTime());
+        Apply apply = applyDAO.getOne(id);
+        if(apply.getType()==0) {
+            hostelDAO.updateHostelCreateTime(Calendar.getInstance().getTime(), apply.getHostelByHostelId().getId());
+        }
         Map<String, Object> map = new HashMap<String,Object>();
         map.put("success",true);
         return map;

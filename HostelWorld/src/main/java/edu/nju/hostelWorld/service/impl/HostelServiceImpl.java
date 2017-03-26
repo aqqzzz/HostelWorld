@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import java.sql.Date;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -73,35 +74,91 @@ public class HostelServiceImpl implements HostelService{
     public Map<String, Object> login(int id, String password) {
         Map<String, Object> map = new HashMap<String, Object>();
 
+        //这个店铺的开店申请一定是列表中的第一个，所以可以直接取其中第一个来进行判断
         Hostel hostel = hostelDAO.findOne(id);
-        Apply apply = applyDAO.findByHostelByHostelId(hostel);
+        List<Apply> applyList = applyDAO.findByHostelByHostelId(hostel);
+        Apply apply = null;
+        if(applyList.size()!=0){
+            apply = applyList.get(0);
+        }
+
+
         if(hostel==null){
             map.put("success",false);
             map.put("error","id"); //登陆id错误
-        }else if(apply.getStatus()==DataUtil.WAIT){
-            map.put("success",false);
-            map.put("error","wait");//申请中
-        }else if(apply.getStatus()==DataUtil.NOT_APPROVED){
-            map.put("success",false);
-            map.put("error","rejected");//未通过审批
         }else if(!hostel.getHostPassword().equals(password)){
             map.put("success",false);
             map.put("error","password");//登录密码错误
-        }else{
-            map.put("success",true);
+        }else if(apply!=null){
+            if(apply.getStatus()==DataUtil.WAIT){
+                map.put("success",false);
+                map.put("error","wait");//申请中
+            }else if(apply.getStatus()==DataUtil.NOT_APPROVED){
+                map.put("success",false);
+                map.put("error","rejected");//未通过审批
+            }else{
+                map.put("success",true);
+            }
+        }else {
+            map.put("success",false);
+            map.put("error","noRecord");//没有通过开店审批的记录（虽然这个情况不可能出现）
         }
+
         return map;
 
     }
 
-    public Hostel getHostelInfo(int id) {
+    public Map<String, Object> getHostelInfo(int id) {
+        Map<String, Object> map = new HashMap<String, Object>();
+
         Hostel hostel = hostelDAO.findOne(id);
-        return hostel;
+        List<Apply> applyList = applyDAO.findByHostelByHostelId(hostel);
+        Apply apply = null;
+
+        if (applyList.size() > 0) {
+            Apply tmp = applyList.get(applyList.size() - 1);
+            if (tmp.getType() == 1) {
+                apply = tmp;
+            }
+        }
+
+        if (apply != null) {
+            Byte status = apply.getStatus();
+            if (status == DataUtil.WAIT) {
+                map.put("success", false);//申请中状态时不能修改本店信息
+                map.put("error", "wait");//申请中
+            } else if (status == DataUtil.NOT_APPROVED) {
+                map.put("success", true);//申请被拒绝后可以修改本店信息
+                map.put("hint", "rejected");//申请被拒绝
+            } else if (status == DataUtil.APPROVED) {
+                map.put("success", true);
+                map.put("hint", "approved");//申请通过
+            }
+        }else{
+            map.put("success",true);
+        }
+
+        map.put("hostel", hostel);
+        return map;
     }
 
     public Map<String,Object> editHostelInfo(Hostel hostel) {
         Map<String,Object> map = new HashMap<String,Object>();
+
+        Hostel origin = hostelDAO.findOne(hostel.getId());
+        hostel.setHostBankAccountByBankCard(origin.getHostBankAccountByBankCard());
+
         hostelDAO.save(hostel);
+
+        Apply apply = new Apply();
+        apply.setHostelByHostelId(hostel);
+        apply.setType(DataUtil.EDIT);
+        apply.setStatus(DataUtil.WAIT);
+        apply.setCreateTime(Calendar.getInstance().getTime());
+
+        applyDAO.save(apply);
+
+        map.put("success",true);
         return map;
     }
 
