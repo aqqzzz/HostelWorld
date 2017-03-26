@@ -2,8 +2,10 @@ package edu.nju.hostelWorld.controller;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import edu.nju.hostelWorld.entity.Hostel;
+import edu.nju.hostelWorld.entity.Plan;
 import edu.nju.hostelWorld.entity.RoomLevel;
 import edu.nju.hostelWorld.service.HostelService;
+import edu.nju.hostelWorld.service.PlanService;
 import edu.nju.hostelWorld.service.RoomLevelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,6 +31,8 @@ public class HostelController {
     HostelService hostelService;
     @Autowired
     RoomLevelService roomLevelService;
+    @Autowired
+    PlanService planService;
 
     @RequestMapping("/")
     public String home(){
@@ -120,6 +124,47 @@ public class HostelController {
         Map<String,Object> map = hostelService.editHostelInfo(hostel);
         model.addAttribute("hostel",hostel);
         return "hostel/detail/hostelInfo";
+    }
+
+    @RequestMapping(value = "/plan",method = RequestMethod.GET)
+    public String getPlanPage(HttpSession session, Model model){
+        int id = (Integer)session.getAttribute("host_id");
+
+        return "hostel/plan";
+    }
+
+    @RequestMapping(value = "/getPlanInfo", method = RequestMethod.GET)
+    public String getPlanInfo(HttpSession session, Model model){
+        int id = (Integer) session.getAttribute("host_id");
+        List<Plan> planList = planService.getAllPlans(id);
+        List<RoomLevel> roomLevels = roomLevelService.getAllRoomLevel(id);
+        model.addAttribute(roomLevels);
+        model.addAttribute("planList", planList);
+        return "hostel/detail/planInfo";
+    }
+
+    @RequestMapping(value = "/addPlanInfo",method = RequestMethod.POST)
+    public String addPlanInfo(HttpSession session, Model model, @RequestBody Plan plan){
+        int id = (Integer)session.getAttribute("host_id");
+        Map<String, Object> map = hostelService.getHostelInfo(id);
+        Hostel hostel = (Hostel)map.get("hostel");
+
+        plan.setHostelByHostelId(hostel);
+        RoomLevel roomLevel = roomLevelService.getRoomLevel(plan.getRoomLevelId());
+        plan.setRoomLevelById(roomLevel);
+
+        if(planService.addPlan(plan)){
+            return getPlanInfo(session,model);
+        }else{
+            return "hostel/detail/planInfo";
+        }
+
+    }
+
+    @RequestMapping(value = "/deletePlanInfo", method = RequestMethod.POST)
+    @ResponseBody
+    public void deletePlanInfo(int planId){
+        planService.deletePlan(planId);
     }
 
 }

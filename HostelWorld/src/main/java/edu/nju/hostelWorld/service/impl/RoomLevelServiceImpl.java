@@ -56,4 +56,10 @@ public class RoomLevelServiceImpl implements RoomLevelService{
         }
         return map;
     }
+
+    public RoomLevel getRoomLevel(int id) {
+        return roomLevelDAO.findOne(id);
+    }
+
+
 }

@@ -17,4 +17,6 @@ public interface RoomLevelService {
     public void removeRoomLevel(int id);
 
     public Map<String, Object> changeRoomLevel(RoomLevel roomLevel);
+
+    public RoomLevel getRoomLevel(int id);
 }

@@ -104,10 +104,8 @@
 <script>
     $(document).ready(function(){
         if(${success==false}){
-            alert("success"+${success});
             $('#submit-btn').attr("disabled","true");
         }else{
-            alert("not success");
             $('#submit-btn').removeAttr("disabled");
         }
     });

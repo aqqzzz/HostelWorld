@@ -11,7 +11,7 @@
         <li class="active"><a href="#">我的客栈</a></li><%--客栈统计信息--%>
         <li><a href="#">入住登记</a></li>
         <li><a href="#">离店登记</a></li>
-        <li><a href="#">我的计划</a></li>
+        <li><a href="/hostel/plan">我的计划</a></li>
         <li><a href="/hostel/info">修改信息</a></li>
     </ul>
 </div>

@@ -27,6 +27,7 @@
     <column id="22" parent="9" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
     </column>
     <column id="23" parent="9" name="hostel_id">
       <mandatory>1</mandatory>
@@ -320,7 +321,7 @@
     <column id="95" parent="18" name="end_time">
       <data-type>date|0</data-type>
     </column>
-    <column id="96" parent="18" name="room_type">
+    <column id="96" parent="18" name="room_level_id">
       <comment>房间类型</comment>
       <data-type>tinyint(4)|0</data-type>
     </column>

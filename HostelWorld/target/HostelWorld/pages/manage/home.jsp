@@ -48,7 +48,7 @@
                                         <td id="hostel-${item.id}">${item.hostelByHostelId.id}</td>
                                         <td>
                                             <c:choose>
-                                                <c:when test="${item.status==0}">
+                                                <c:when test="${item.type==0}">
                                                     开店申请
                                                 </c:when>
                                                 <c:otherwise>

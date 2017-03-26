@@ -1,7 +1,7 @@
 package edu.nju.hostelWorld.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created by 张文玘 on 2017/3/10.
@@ -11,8 +11,9 @@ public class Plan {
     private int id;
     private Date startTime;
     private Date endTime;
-    private Byte roomType;
+    private RoomLevel roomLevelById;
     private Double price;
+    private int roomLevelId;
     private Hostel hostelByHostelId;
 
     @Id
@@ -46,16 +47,6 @@ public class Plan {
     }
 
     @Basic
-    @Column(name = "room_type", nullable = true)
-    public Byte getRoomType() {
-        return roomType;
-    }
-
-    public void setRoomType(Byte roomType) {
-        this.roomType = roomType;
-    }
-
-    @Basic
     @Column(name = "price", nullable = true, precision = 0)
     public Double getPrice() {
         return price;
@@ -63,6 +54,13 @@ public class Plan {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    @Transient
+    public int getRoomLevelId(){ return roomLevelId; }
+
+    public void setRoomLevelId(int roomLevelId) {
+        this.roomLevelId = roomLevelId;
     }
 
     @Override
@@ -75,7 +73,7 @@ public class Plan {
         if (id != plan.id) return false;
         if (startTime != null ? !startTime.equals(plan.startTime) : plan.startTime != null) return false;
         if (endTime != null ? !endTime.equals(plan.endTime) : plan.endTime != null) return false;
-        if (roomType != null ? !roomType.equals(plan.roomType) : plan.roomType != null) return false;
+        if (roomLevelById != null ? !roomLevelById.equals(plan.roomLevelById) : plan.roomLevelById != null) return false;
         if (price != null ? !price.equals(plan.price) : plan.price != null) return false;
 
         return true;
@@ -86,7 +84,7 @@ public class Plan {
         int result = id;
         result = 31 * result + (startTime != null ? startTime.hashCode() : 0);
         result = 31 * result + (endTime != null ? endTime.hashCode() : 0);
-        result = 31 * result + (roomType != null ? roomType.hashCode() : 0);
+        result = 31 * result + (roomLevelById != null ? roomLevelById.hashCode() : 0);
         result = 31 * result + (price != null ? price.hashCode() : 0);
         return result;
     }
@@ -99,5 +97,13 @@ public class Plan {
 
     public void setHostelByHostelId(Hostel hostelByHostelId) {
         this.hostelByHostelId = hostelByHostelId;
+    }
+
+    @OneToOne
+    @JoinColumn(name="room_level_id", referencedColumnName = "id")
+    public RoomLevel getRoomLevelById(){return roomLevelById;}
+
+    public void setRoomLevelById(RoomLevel roomLevelById) {
+        this.roomLevelById = roomLevelById;
     }
 }

@@ -3,9 +3,11 @@ package edu.nju.hostelWorld.service.impl;
 import edu.nju.hostelWorld.dao.ApplyDAO;
 import edu.nju.hostelWorld.dao.BankAccountDAO;
 import edu.nju.hostelWorld.dao.HostelDAO;
+import edu.nju.hostelWorld.dao.PlanDAO;
 import edu.nju.hostelWorld.entity.Apply;
 import edu.nju.hostelWorld.entity.BankAccount;
 import edu.nju.hostelWorld.entity.Hostel;
+import edu.nju.hostelWorld.entity.Plan;
 import edu.nju.hostelWorld.service.HostelService;
 import edu.nju.hostelWorld.util.DataUtil;
 import javafx.scene.chart.PieChart;
@@ -31,6 +33,8 @@ public class HostelServiceImpl implements HostelService{
     BankAccountDAO bankAccountDAO;
     @Autowired
     ApplyDAO applyDAO;
+    @Autowired
+    PlanDAO planDAO;
 
     //开店申请
     public Map<String, Object> register(Hostel hostel) {
