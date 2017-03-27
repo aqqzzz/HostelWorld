@@ -6,16 +6,16 @@ import edu.nju.hostelWorld.entity.Plan;
 import edu.nju.hostelWorld.entity.RoomLevel;
 import edu.nju.hostelWorld.service.HostelService;
 import edu.nju.hostelWorld.service.PlanService;
+import edu.nju.hostelWorld.service.RoomInfoService;
 import edu.nju.hostelWorld.service.RoomLevelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.http.HttpSession;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,6 +33,8 @@ public class HostelController {
     RoomLevelService roomLevelService;
     @Autowired
     PlanService planService;
+    @Autowired
+    RoomInfoService roomInfoService;
 
     @RequestMapping("/")
     public String home(){
@@ -153,9 +155,20 @@ public class HostelController {
         RoomLevel roomLevel = roomLevelService.getRoomLevel(plan.getRoomLevelId());
         plan.setRoomLevelById(roomLevel);
 
-        if(planService.addPlan(plan)){
+        Map<String,Object> planMap = planService.addPlan(plan);
+
+        if((Boolean) planMap.get("success")){
+            //保存成功，设置计划内的roominfo
+
+            Map<String, Object> roomInfoMap = roomInfoService.savePlanRoomInfo(plan);
+
             return getPlanInfo(session,model);
         }else{
+            if(planMap.get("error").equals("expired")){
+                model.addAttribute("error","计划开始时间必须晚于今天！");
+            }else if(planMap.get("error").equals("days")){
+                model.addAttribute("error","计划持续时间不得超过100天！");
+            }
             return "hostel/detail/planInfo";
         }
 
@@ -163,8 +176,43 @@ public class HostelController {
 
     @RequestMapping(value = "/deletePlanInfo", method = RequestMethod.POST)
     @ResponseBody
-    public void deletePlanInfo(int planId){
-        planService.deletePlan(planId);
+    public Map<String, Object> deletePlanInfo(int planId){
+        Map<String, Object> map = planService.deletePlan(planId);
+
+        if(!(Boolean) map.get("success")){
+            if(map.get("error").equals("expired")){
+                map.put("error", "此计划已经开始，不能删除！");
+            }
+        }
+        return map;
     }
+
+
+    @RequestMapping(value = "/getAllHostel", method = RequestMethod.GET)
+    public String getAllHostel(Model model){
+        List<Hostel> hostelList = hostelService.getAllHostel();
+        model.addAttribute("hostelList", hostelList);
+        return "customer/hostelList";
+    }
+
+    @RequestMapping(value = "/getHostel/{id}",method = RequestMethod.GET)
+    public String getHostel(@PathVariable("id") int id, Model model){
+        Map<String, Object> map = hostelService.getHostelInfo(id);
+        Hostel hostel = (Hostel)map.get("hostel");
+
+        model.addAttribute("hostel",hostel);
+        return "customer/hostelSingle";
+    }
+
+    @RequestMapping(value = "getHostelPlan/{id}/{inTime}/{outTime}", method = RequestMethod.GET)
+    public String getHostelPlan(@PathVariable("id") int id, @PathVariable("inTime") Date inTime,
+                            @PathVariable("outTime") Date outTime, Model model){
+        List<Plan> planList = planService.getPlanByTime(inTime,outTime,id);
+
+        model.addAttribute("planList", planList);
+        return "customer/detail/hostelPlan";
+
+    }
+
 
 }

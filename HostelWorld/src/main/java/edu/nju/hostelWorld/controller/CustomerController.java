@@ -1,21 +1,24 @@
 package edu.nju.hostelWorld.controller;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
-import edu.nju.hostelWorld.entity.CustLevel;
-import edu.nju.hostelWorld.entity.Customer;
-import edu.nju.hostelWorld.service.CustomerService;
+import edu.nju.hostelWorld.dao.PlanDAO;
+import edu.nju.hostelWorld.entity.*;
+import edu.nju.hostelWorld.service.*;
 import org.dom4j.rule.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.security.access.method.P;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -26,6 +29,14 @@ import java.util.Map;
 public class CustomerController {
     @Autowired
     CustomerService customerService;
+    @Autowired
+    ReserveService reserveService;
+    @Autowired
+    PlanService planService;
+    @Autowired
+    HostelService hostelService;
+    @Autowired
+    RoomInfoService roomInfoService;
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String getUserHome(){
@@ -124,4 +135,66 @@ public class CustomerController {
 
         return map;
     }
+
+
+    @RequestMapping(value = "/reserve/{planId}/{inTime}/{outTime}", method = RequestMethod.GET)
+    public String getReservePage(@PathVariable("planId")int planId, @PathVariable("inTime") Date inTime,
+                                 @PathVariable("outTime") Date outTime, Model model){
+        Plan plan = planService.getPlan(planId);
+        model.addAttribute("plan",plan);
+        List<RoomInfo> roomInfos = roomInfoService.getFreeRoom(plan, inTime, outTime);
+        model.addAttribute("roomInfos", roomInfos);
+        model.addAttribute("inTime",inTime);
+        model.addAttribute("outTime",outTime);
+        model.addAttribute("betweenDays",(outTime.getTime()-inTime.getTime())/(1000*60*60*24));
+
+        return "customer/reserve";
+    }
+
+    @RequestMapping(value = "/reserve",method = RequestMethod.POST)
+    public String reserve(@DateTimeFormat(pattern = "yyyy-MM-dd") Date inTime, @DateTimeFormat(pattern = "yyyy-MM-dd")Date outTime, int roomCount, byte payType, int planId, Model model, HttpSession session){
+        Plan plan = planService.getPlan(planId);
+
+        List<RoomInfo> roomInfos = roomInfoService.getFreeRoom(plan, inTime, outTime);
+        int custId = (Integer) session.getAttribute("cust_id");
+        Customer customer = customerService.getCustomerById(custId);
+
+        int betweenDays = (int)(outTime.getTime()-inTime.getTime())/(1000*60*60*24);
+        List<Integer> reserveIdList = new ArrayList<Integer>();
+
+        double price = betweenDays*roomCount*plan.getPrice();
+        if(roomInfos.size()<roomCount){
+            model.addAttribute("error", "预订房间数超过剩余房间数量！");
+            return getReservePage(plan.getId(), inTime, outTime, model);
+        }else if(price>customer.getBalance()){
+            model.addAttribute("error", "卡余额不足，请先充值！");
+            return getReservePage(plan.getId(), inTime, outTime, model);
+        }else{
+            for(int i = 0; i < roomCount; i++){
+                RoomInfo roomInfo = roomInfos.get(i);
+                Map<String, Object> map = reserveService.reserve(custId, roomInfo.getId(),payType,inTime,outTime);
+                if((Boolean) map.get("success")){
+                    int reserveId = (Integer) map.get("reserveId");
+                    reserveIdList.add(reserveId);
+                }
+            }
+            model.addAttribute("reserveIdList", reserveIdList);
+            return "customer/reserveSuccess";
+        }
+    }
+
+    @RequestMapping(value = "/planBetween", method = RequestMethod.GET)
+    public String getPlanBetween(@DateTimeFormat(pattern = "yyyy-MM-dd") Date inTime, @DateTimeFormat(pattern = "yyyy-MM-dd") Date outTime, int hostelId, Model model){
+
+        List<Plan> planList = planService.getPlanByTime(inTime, outTime, hostelId);
+        model.addAttribute("planList",planList);
+        model.addAttribute("inTime", inTime);
+        model.addAttribute("outTime", outTime);
+
+        return "customer/detail/hostelPlan";
+    }
+
+
+
+
 }

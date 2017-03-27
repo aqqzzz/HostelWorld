@@ -24,13 +24,11 @@
                     </div>
                 </c:when>
                 <c:otherwise>
-                    <c:if test="${sessionScope.get('cust_id')!=null}">
-                        <ul class="am-nav am-nav-pills am-topbar-nav">
+                    <ul class="am-nav am-nav-pills am-topbar-nav">
                             <li><a href="/customer/home">首页</a></li>
-                            <li><a href="#">酒店</a></li>
+                            <li><a href="/hostel/getAllHostel">酒店</a></li>
                             <li><a href="/customer/dashboard">我的</a></li>
-                        </ul>
-                    </c:if>
+                    </ul>
                     <div class="am-topbar-right">
                         <a type="button" class="am-btn am-btn-primary am-topbar-btn am-btn-sm" id="logout-btn" href="/auth/logout">登出</a>
                     </div>

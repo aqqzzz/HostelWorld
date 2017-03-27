@@ -1,6 +1,7 @@
 package edu.nju.hostelWorld.dao;
 
 import edu.nju.hostelWorld.entity.BankAccount;
+import edu.nju.hostelWorld.entity.CustLevel;
 import edu.nju.hostelWorld.entity.CustStatus;
 import edu.nju.hostelWorld.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -55,4 +56,14 @@ public interface CustomerDAO extends JpaRepository<Customer, Long> {
     @Transactional
     @Query("update Customer as c set c.custStatusByUserid=?1 where c.userid=?2")
     int updateCustStatus(CustStatus custStatus, int id);
+
+    @Modifying
+    @Transactional
+    @Query("update Customer as c set c.custLevelById=?1 where c.userid=?2")
+    int updateCustLevelById(CustLevel custLevel, int id);
+
+    @Modifying
+    @Transactional
+    @Query("update Customer as c set c.consumpTotal=?1 where c.userid=?2")
+    int updateConsumpTotal(double consump, int userid);
 }

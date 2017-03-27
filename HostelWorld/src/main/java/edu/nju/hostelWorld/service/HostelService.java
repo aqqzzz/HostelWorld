@@ -3,6 +3,7 @@ package edu.nju.hostelWorld.service;
 import edu.nju.hostelWorld.entity.Hostel;
 import edu.nju.hostelWorld.entity.Plan;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -18,5 +19,6 @@ public interface HostelService {
 
     public Map<String,Object> editHostelInfo(Hostel hostel);
 
+    public List<Hostel> getAllHostel();
 
 }

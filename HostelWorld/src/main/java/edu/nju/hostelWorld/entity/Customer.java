@@ -23,6 +23,7 @@ public class Customer {
     private Double consumpTotal;
     private CustStatus custStatusByUserid;
     private BankAccount bankAccountByBankCard;
+    private CustLevel custLevelById;
 
     @Id
     @Column(name = "userid", nullable = false)
@@ -169,5 +170,13 @@ public class Customer {
 
     public void setBankAccountByBankCard(BankAccount bankAccountByBankCard) {
         this.bankAccountByBankCard = bankAccountByBankCard;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "cust_level_id", referencedColumnName = "id")
+    public CustLevel getCustLevelById(){ return custLevelById; }
+
+    public void setCustLevelById(CustLevel custLevelById) {
+        this.custLevelById = custLevelById;
     }
 }

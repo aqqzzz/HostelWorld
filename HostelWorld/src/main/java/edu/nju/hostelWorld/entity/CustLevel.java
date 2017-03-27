@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by 张文玘 on 2017/3/10.
  */
 @Entity
-@Table(name = "cust_level", schema = "hostelworld", catalog = "")
+@Table(name = "cust_level", schema = "hostelworld")
 public class CustLevel {
     private int id;
     private Double consumpTotal;

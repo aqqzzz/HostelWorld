@@ -166,5 +166,10 @@ public class HostelServiceImpl implements HostelService{
         return map;
     }
 
+    public List<Hostel> getAllHostel() {
+        List<Hostel> hostelList = hostelDAO.findAll();
+        return hostelList;
+    }
+
 
 }

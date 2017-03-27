@@ -70,7 +70,6 @@
         </ul>
     </div>
 </div>
-<h1>欢迎,${cust_id}</h1>
 
 <jsp:include page="../common/footer.jsp"/>
 </body>

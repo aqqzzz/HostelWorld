@@ -1,5 +1,7 @@
 package edu.nju.hostelWorld.entity;
 
+import org.springframework.context.annotation.Lazy;
+
 import javax.persistence.*;
 import java.util.Date;
 

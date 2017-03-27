@@ -7,14 +7,15 @@ import java.sql.Date;
  * Created by 张文玘 on 2017/3/10.
  */
 @Entity
-@Table(name = "room_info", schema = "hostelworld", catalog = "")
+@Table(name = "room_info", schema = "hostelworld")
 public class RoomInfo {
     private int id;
-    private Byte roomType;
+    private RoomLevel roomLevelId;
     private int roomNum;
     private String freeTime;
     private Date today;
     private Hostel hostelByHostelId;
+    private Plan planByPlanId;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -24,16 +25,6 @@ public class RoomInfo {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    @Basic
-    @Column(name = "room_type", nullable = true)
-    public Byte getRoomType() {
-        return roomType;
-    }
-
-    public void setRoomType(Byte roomType) {
-        this.roomType = roomType;
     }
 
     @Basic
@@ -75,7 +66,7 @@ public class RoomInfo {
 
         if (id != roomInfo.id) return false;
         if (roomNum != roomInfo.roomNum) return false;
-        if (roomType != null ? !roomType.equals(roomInfo.roomType) : roomInfo.roomType != null) return false;
+        if (roomLevelId != null ? !roomLevelId.equals(roomInfo.roomLevelId) : roomInfo.roomLevelId != null) return false;
         if (freeTime != null ? !freeTime.equals(roomInfo.freeTime) : roomInfo.freeTime != null) return false;
         if (today != null ? !today.equals(roomInfo.today) : roomInfo.today != null) return false;
 
@@ -85,7 +76,7 @@ public class RoomInfo {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (roomType != null ? roomType.hashCode() : 0);
+        result = 31 * result + (roomLevelId != null ? roomLevelId.hashCode() : 0);
         result = 31 * result + roomNum;
         result = 31 * result + (freeTime != null ? freeTime.hashCode() : 0);
         result = 31 * result + (today != null ? today.hashCode() : 0);
@@ -100,5 +91,21 @@ public class RoomInfo {
 
     public void setHostelByHostelId(Hostel hostelByHostelId) {
         this.hostelByHostelId = hostelByHostelId;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "plan_id", referencedColumnName = "id")
+    public Plan getPlanByPlanId(){ return planByPlanId; }
+
+    public void setPlanByPlanId(Plan planByPlanId) {
+        this.planByPlanId = planByPlanId;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "room_level_id", referencedColumnName = "id")
+    public RoomLevel getRoomLevelId(){ return roomLevelId; }
+
+    public void setRoomLevelId(RoomLevel roomLevelId) {
+        this.roomLevelId = roomLevelId;
     }
 }

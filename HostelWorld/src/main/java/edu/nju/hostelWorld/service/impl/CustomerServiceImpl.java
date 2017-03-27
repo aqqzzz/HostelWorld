@@ -187,6 +187,8 @@ public class CustomerServiceImpl implements CustomerService{
                 status.setStopTime(stopTime);
 
                 custStatusDAO.save(status);
+                CustLevel custLevel = getCustLevel(cust.getConsumpTotal());
+                customerDAO.updateCustLevelById(custLevel, id);
                 customerDAO.updateCustStatus(status,id);
             }
             map.put("success", true);

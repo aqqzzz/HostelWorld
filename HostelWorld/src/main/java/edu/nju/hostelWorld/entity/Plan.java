@@ -17,6 +17,7 @@ public class Plan {
     private Hostel hostelByHostelId;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;
@@ -99,7 +100,7 @@ public class Plan {
         this.hostelByHostelId = hostelByHostelId;
     }
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name="room_level_id", referencedColumnName = "id")
     public RoomLevel getRoomLevelById(){return roomLevelById;}
 

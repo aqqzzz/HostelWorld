@@ -12,4 +12,6 @@ import java.util.List;
 @Repository
 public interface CustLevelDAO extends JpaRepository<CustLevel, Integer>{
     List<CustLevel> findAll();
+
+    CustLevel findByLevel(int level);
 }

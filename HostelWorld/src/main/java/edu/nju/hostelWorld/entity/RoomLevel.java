@@ -23,7 +23,6 @@ public class RoomLevel {
     private Hostel hostelByHostelId;
 
     @Id
-    @GeneratedValue
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;

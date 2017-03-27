@@ -8,8 +8,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<button class="btn btn-success" id="add-plan-btn" onclick="addPlanCell()"><i class="fa fa-plus-circle">添加计划</i></button>
 
+<div class="tip" id="error-message">
+    <c:if test="${error!=null}">
+        <c:out value="${error}"/>
+    </c:if>
+</div>
 <table id="plan-info-table" class="table table-hover">
     <thead>
     <tr>
@@ -32,7 +36,7 @@
             <c:set var="index" value="0"/>
             <c:forEach items="${planList}" var="item">
                 <tr id="${item.id}">
-                    <td><c:set var="index" value="${index+1}"/>
+                    <td class="index"><c:set var="index" value="${index+1}"/>
                     <c:out value="${index}"/> </td>
                     <td class="roomLevel">${item.roomLevelById.roomName}</td>
                     <td class="startTime"><fmt:formatDate pattern="yyyy-MM-dd" value="${item.startTime}"/></td>
@@ -55,28 +59,38 @@
 
 <script>
     function addPlanCell(){
-        var tb = $('#plan-info-table tr:last');
+        var tb = $('#plan-info-table');
         var index = <c:out value="${index+1}"/>;
 
         var options;
         <c:forEach items="${roomLevelList}" var="room">
-            options+='<option id="option-${room.id}">${room.roomName}</option>';
+        options+='<option id="option-${room.id}">${room.roomName}</option>';
         </c:forEach>
 
+        var currentDate = new Date();
+        var year = currentDate.getFullYear();
+        var month = currentDate.getMonth()+1+"";
+        //month补0
+        if(month.length==1){
+            month = "0"+month;
+
+        }
+        var day = currentDate.getDate();
+        var dateString = year+"-"+month+"-"+day;
 
         var insetHTML = '<tr id="edit-plan-input">'+
                 '<td>'+index+'</td>'+
                 '<td><select class="form-control" name="roomLevelById">'+ options +
                 '</select></td>'+
-                '<td><input type="date" class="form-control" name="startTime"/></td>'+
-                '<td><input type="date" class="form-control" name="endTime"/> </td>'+
+                '<td><input type="date" class="form-control" name="startTime" min="'+dateString+'"/></td>'+
+                '<td><input type="date" class="form-control" name="endTime" min="'+dateString+'"/> </td>'+
                 '<td><input type="text" class="form-control" name="price"/></td>'+
                 '<td><button class="btn btn-success" onclick="savePlan()"><i class="fa fa-check"/></button>'+
                 '<button class="btn btn-danger" onclick="cancelAdd()"><i class="fa fa-close" /></button> </td>'+
                 '</tr>';
 
-        tb.after(insetHTML);
-    }
+        tb.append(insetHTML);
+    };
 
     function savePlan(id=null){
         var roomLevel = $("select[name='roomLevelById']").find("option:selected");
@@ -101,15 +115,15 @@
                 alert(JSON.stringify(result));
             }
         })
-    }
+    };
 
     function cancelAdd(){
         $('#edit-plan-input').remove();
-    }
+    };
 
     $('#plan-info-table').on('click','.edit-plan',function(){
         var id = $(this).attr("id").split('-')[1];
-        var index = <c:out value="${index}"/>;
+        var index = $("#"+id+" .index").text();
         var roomName = $("#"+id+" .roomLevel").text();
         var startTime = $("#"+id+" .startTime").text();
         var endTime = $("#"+id+" .endTime").text();
@@ -120,7 +134,6 @@
         <c:forEach items="${roomLevelList}" var="room">
         options+='<option id="option-${room.id}">${room.roomName}</option>';
         </c:forEach>
-
         var insertHTML = '<td>'+index+'</td>'+
                 '<td><select class="form-control" name="roomLevelById">'+ options +
                 '</select></td>'+
@@ -130,9 +143,10 @@
                 '<td><button class="btn btn-success" onclick="savePlan('+id+')"><i class="fa fa-check"/></button>'+
                 '<button class="btn btn-danger" onclick="getPlanInfo()"><i class="fa fa-close" /></button> </td>';
 
-        $('#'+id).html(insertHTML);
+        $('tr#'+id).html(insertHTML);
         $('select[name="roomLevelById"]').val(roomName);
     });
+
 
     $('#plan-info-table').on('click', '.delete-plan', function(){
         var id = $(this).attr("id").split('-')[1];
@@ -143,13 +157,20 @@
             data:{
                 planId: id
             },
-            success:function(){
-                getPlanInfo();
+            success:function(result){
+                if(result['success']){
+                    getPlanInfo();
+                }else{
+                    var errorMsg = $("#error-message");
+                    errorMsg.addClass("alert alert-danger");
+                    errorMsg.html(result['error']);
+                }
+
             },
             error: function(result){
                 alert(JSON.stringify(result));
             }
         })
-    })
+    });
 
 </script>

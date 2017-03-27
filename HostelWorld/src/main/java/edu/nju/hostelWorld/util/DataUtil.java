@@ -27,6 +27,23 @@ public class DataUtil {
     public static byte CREATE = 0; //开店申请
     public static byte EDIT = 1; //修改店铺信息申请
 
+    //订单状态
+    public static byte RESERVE = 1;//已预订
+    public static byte RESERVE_CANCEL = 0; //已取消
+    public static byte CHECK_IN = 2; //已入住
+    public static byte CHECK_OUT = 3; //已离店
+
+    //申请结算的状态
+    public static byte WAIT_SETTLEMENT = 0; //正在等待
+    public static byte HAVE_SETTLEMENT = 1; //已结算
+
+    //结算原因
+    public static byte REASON_CANCEL = 0; //客户取消订单
+    public static byte REASON_FINISHED = 1; //交易完成（已入住），向客栈结算钱款
+
+    //付款方式
+    public static byte PAY_BY_CARD = 0; //使用会员卡付款
+    public static byte PAY_BY_CASH = 1; //使用现金付款
 
     public static boolean isPhoneNum(String phoneNumber){
         Pattern pattern = Pattern.compile("^\\d{11}$");

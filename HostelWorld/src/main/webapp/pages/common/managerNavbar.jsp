@@ -13,7 +13,7 @@
         </h1>
         <div class="am-collapse am-topbar-collapse">
             <c:choose>
-                <c:when test="${sessionScope.get('manage_id') == null}">
+                <c:when test="${sessionScope.get('manage_id') == null && sessionScope.get('host_id')==null}">
                     <div class="am-topbar-right">
                         <a type="button" class="am-btn am-btn-primary am-topbar-btn am-btn-sm" id="login-btn" href="/auth/login">登陆</a>
                     </div>

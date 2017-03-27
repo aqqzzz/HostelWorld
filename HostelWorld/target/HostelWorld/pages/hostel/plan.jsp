@@ -26,7 +26,7 @@
                         <div class="page-header">
                             <h1>我的计划</h1>
                         </div>
-
+                        <button class="btn btn-success" id="add-plan-btn" onclick="addPlanCell()"><i class="fa fa-plus-circle">添加计划</i></button>
                         <div class="normal-div tips"></div>
 
                         <div class="normal-div" id="plan-info-container"></div>
@@ -52,5 +52,7 @@
             }
         })
     }
+
+
 </script>
 </html>

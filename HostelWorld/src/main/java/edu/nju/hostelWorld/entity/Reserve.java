@@ -1,7 +1,7 @@
 package edu.nju.hostelWorld.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created by 张文玘 on 2017/3/10.
@@ -21,8 +21,10 @@ public class Reserve {
     private Date actualLeaveTime;
     private Byte payType;
     private Customer customerByCustId;
+    private RoomInfo roomInfoById;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;
@@ -192,5 +194,13 @@ public class Reserve {
 
     public void setCustomerByCustId(Customer customerByCustId) {
         this.customerByCustId = customerByCustId;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "room_info_id", referencedColumnName = "id")
+    public RoomInfo getRoomInfoById(){ return roomInfoById; }
+
+    public void setRoomInfoById(RoomInfo roomInfoById) {
+        this.roomInfoById = roomInfoById;
     }
 }

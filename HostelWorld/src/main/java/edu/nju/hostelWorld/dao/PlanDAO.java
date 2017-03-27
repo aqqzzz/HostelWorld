@@ -5,6 +5,7 @@ import edu.nju.hostelWorld.entity.Plan;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -14,5 +15,9 @@ import java.util.List;
 public interface PlanDAO extends JpaRepository<Plan, Integer> {
 
     List<Plan> findByHostelByHostelId(Hostel hostel);
+
+    List<Plan> findByStartTimeBefore(Date start);
+
+    List<Plan> findByEndTimeAfter(Date end);
 
 }

@@ -20,4 +20,9 @@ public interface HostelDAO extends JpaRepository<Hostel,Integer>{
     @Query("update Hostel as h set h.createTime=?1 where h.id=?2")
     int updateHostelCreateTime(Date date, int id);
 
+    @Modifying
+    @Transactional
+    @Query("update Hostel as h set h.balance=?1 where h.id=?2")
+    int updateByBalance(double balance, int id);
+
 }
