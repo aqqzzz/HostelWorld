@@ -1,6 +1,9 @@
 package edu.nju.hostelWorld.entity;
 
+import org.springframework.stereotype.Controller;
+
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by 张文玘 on 2017/3/27.
@@ -12,6 +15,8 @@ public class Settlement {
     private Byte status;
     private Double amount;
     private Double actualRate;
+    private Date createTime;
+    private Date settleTime;
     private Reserve reserveByReserveId;
 
     @Id
@@ -60,6 +65,22 @@ public class Settlement {
 
     public void setActualRate(Double actualRate) {
         this.actualRate = actualRate;
+    }
+
+    @Basic
+    @Column(name = "settle_time")
+    public Date getSettleTime(){ return settleTime; }
+
+    public void setSettleTime(Date settleTime) {
+        this.settleTime = settleTime;
+    }
+
+    @Basic
+    @Column(name = "create_time")
+    public Date getCreateTime(){ return createTime; }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     @Override

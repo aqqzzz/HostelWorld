@@ -1,5 +1,6 @@
 package edu.nju.hostelWorld.dao;
 
+import edu.nju.hostelWorld.entity.Reserve;
 import edu.nju.hostelWorld.entity.Settlement;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
@@ -8,6 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,6 +27,15 @@ public interface SettlementDAO extends JpaRepository<Settlement, Integer>{
 
     @Modifying
     @Transactional
-    @Query("update Settlement as s set s.status=?2 where s.id=?2")
+    @Query("update Settlement as s set s.status=?1 where s.id=?2")
     int updateByStatus(byte status, int id);
+
+    List<Settlement> findByReason(byte reason);
+
+    Settlement findByReserveByReserveId(Reserve reserve);
+
+    @Modifying
+    @Transactional
+    @Query("update Settlement as s set s.settleTime=?1 where s.id=?2")
+    int updateBySettleTime(Date settleTime, int id);
 }

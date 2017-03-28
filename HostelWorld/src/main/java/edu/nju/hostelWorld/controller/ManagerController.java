@@ -3,10 +3,9 @@ package edu.nju.hostelWorld.controller;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import edu.nju.hostelWorld.dao.ApplyDAO;
 import edu.nju.hostelWorld.dao.HostelDAO;
-import edu.nju.hostelWorld.entity.Apply;
-import edu.nju.hostelWorld.entity.Hostel;
-import edu.nju.hostelWorld.service.HostelService;
-import edu.nju.hostelWorld.service.ManagerService;
+import edu.nju.hostelWorld.entity.*;
+import edu.nju.hostelWorld.service.*;
+import edu.nju.hostelWorld.util.DataUtil;
 import org.apache.commons.logging.impl.WeakHashtable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,10 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by 张文玘 on 2017/3/22.
@@ -33,6 +29,15 @@ public class ManagerController {
 
     @Autowired
     HostelService hostelService;
+
+    @Autowired
+    ReserveService reserveService;
+
+    @Autowired
+    PayService payService;
+
+
+
 
 
     @RequestMapping("")
@@ -77,5 +82,61 @@ public class ManagerController {
     @ResponseBody
     public void rejectApply(int id){
         managerService.rejectApply(id);
+    }
+
+    @RequestMapping(value = "/settlement", method = RequestMethod.GET)
+    public String getSettlementPage(Model model){
+
+        return "manage/settlement";
+    }
+
+    @RequestMapping(value = "/getSettleList", method = RequestMethod.GET)
+    public String getSettleList(Model model){
+        List<Settlement> list = reserveService.getAllSettlements();
+
+        List<Settlement> settlements = new ArrayList<Settlement>();
+        List<Settlement> solved = new ArrayList<Settlement>();
+        for(int i = 0; i < list.size(); i++){
+            Settlement settlement = list.get(i);
+            if(settlement.getStatus()== DataUtil.WAIT_SETTLEMENT){
+                settlements.add(settlement);
+            }else{
+                solved.add(settlement);
+            }
+        }
+
+        model.addAttribute("settlementList", settlements);
+        model.addAttribute("solvedList", solved);
+
+        return "manage/detail/settleList";
+    }
+
+    @RequestMapping(value = "/settle", method = RequestMethod.POST)
+    public String settle(int settlementId, double rate, Model model){
+        Map<String, Object> map = managerService.acceptSettlement(settlementId, rate);
+        return getSettleList(model);
+    }
+
+    @RequestMapping(value = "/getHostelRecord",method = RequestMethod.GET)
+    public String getHostelRecord(Model model){
+        List<Hostel> hostelList = hostelService.getAllHostel();
+        model.addAttribute("hostelList", hostelList);
+        return "manage/hostelRecord";
+    }
+
+    @RequestMapping(value = "/getCustRecord", method = RequestMethod.GET)
+    public String getCustRecord(Model model){
+        List<Customer> customers = managerService.getAllCustomer();
+        model.addAttribute("customerList",customers);
+        return "manage/customerRecord";
+    }
+
+    @RequestMapping(value = "/getWorldRecord", method = RequestMethod.GET)
+    public String getHostelWorldRecord(Model model){
+        Customer manager = managerService.getManager();
+        List<Pay> payList = payService.getPayByCust(manager.getUserid());
+        model.addAttribute("manager",manager);
+        model.addAttribute("payList", payList);
+        return "manage/record";
     }
 }

@@ -136,7 +136,7 @@ public class AuthController {
         Map<String,Object> map = hostelService.login(hostel.getId(), hostel.getHostPassword());
         if((Boolean) map.get("success")){
             session.setAttribute("host_id", hostel.getId());
-            return "hostel/home";
+            return "redirect:/hostel/";
         }else{
             if(map.get("error").equals("id")){
                 bindingResult.rejectValue("id","id.error","登陆id号错误");

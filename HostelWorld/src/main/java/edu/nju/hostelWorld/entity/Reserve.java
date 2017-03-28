@@ -19,6 +19,7 @@ public class Reserve {
     private Date leaveTime;
     private Date actualCheckinTime;
     private Date actualLeaveTime;
+    private Date cancelTime;
     private Byte payType;
     private Customer customerByCustId;
     private RoomInfo roomInfoById;
@@ -142,6 +143,14 @@ public class Reserve {
 
     public void setPayType(Byte payType) {
         this.payType = payType;
+    }
+
+    @Basic
+    @Column(name = "cancel_time", nullable = true)
+    public Date getCancelTime() { return cancelTime; }
+
+    public void setCancelTime(Date cancelTime) {
+        this.cancelTime = cancelTime;
     }
 
     @Override

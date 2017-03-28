@@ -1,7 +1,7 @@
 package edu.nju.hostelWorld.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created by 张文玘 on 2017/3/10.
@@ -11,7 +11,10 @@ public class Pay {
     private int id;
     private Double money;
     private Date time;
+    private byte type;
+    private byte reason;
     private Customer customerByCustId;
+    private Hostel hostelByHostId;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -41,6 +44,22 @@ public class Pay {
 
     public void setTime(Date time) {
         this.time = time;
+    }
+
+    @Basic
+    @Column(name = "type", nullable = true)
+    public byte getType(){ return type; }
+
+    public void setType(byte type) {
+        this.type = type;
+    }
+
+    @Basic
+    @Column(name = "reason", nullable = true)
+    public byte getReason(){ return reason; }
+
+    public void setReason(byte reason) {
+        this.reason = reason;
     }
 
     @Override
@@ -73,5 +92,13 @@ public class Pay {
 
     public void setCustomerByCustId(Customer customerByCustId) {
         this.customerByCustId = customerByCustId;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "host_id", referencedColumnName = "id")
+    public Hostel getHostelByHostId(){ return hostelByHostId; }
+
+    public void setHostelByHostId(Hostel hostelByHostId) {
+        this.hostelByHostId = hostelByHostId;
     }
 }

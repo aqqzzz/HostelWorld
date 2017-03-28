@@ -1,13 +1,9 @@
 package edu.nju.hostelWorld.controller;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
-import edu.nju.hostelWorld.entity.Hostel;
-import edu.nju.hostelWorld.entity.Plan;
-import edu.nju.hostelWorld.entity.RoomLevel;
-import edu.nju.hostelWorld.service.HostelService;
-import edu.nju.hostelWorld.service.PlanService;
-import edu.nju.hostelWorld.service.RoomInfoService;
-import edu.nju.hostelWorld.service.RoomLevelService;
+import edu.nju.hostelWorld.entity.*;
+import edu.nju.hostelWorld.service.*;
+import edu.nju.hostelWorld.util.DataUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,10 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.http.HttpSession;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by 张文玘 on 2017/3/22.
@@ -35,9 +28,54 @@ public class HostelController {
     PlanService planService;
     @Autowired
     RoomInfoService roomInfoService;
+    @Autowired
+    ReserveService reserveService;
+    @Autowired
+    PayService payService;
 
     @RequestMapping("/")
-    public String home(){
+    public String home(HttpSession session, Model model){
+        int id = (Integer) session.getAttribute("host_id");
+        Hostel hostel = (Hostel)hostelService.getHostelInfo(id).get("hostel");
+
+        List<Reserve> list = reserveService.getReserveByHostel(id);
+
+        List<Reserve> reserveList = new ArrayList<Reserve>();
+        List<Reserve> cancelList = new ArrayList<Reserve>();
+        List<Reserve> checkInList = new ArrayList<Reserve>();
+        List<Reserve> checkOutList = new ArrayList<Reserve>();
+
+        for(int i = 0; i < list.size(); i++){
+            Reserve reserve = list.get(i);
+            if(reserve.getStatus()==1){
+                reserveList.add(reserve);
+            }else if(reserve.getStatus()==0){
+                cancelList.add(reserve);
+            }else if(reserve.getStatus()==2){
+                checkInList.add(reserve);
+            }else{
+                checkOutList.add(reserve);
+            }
+        }
+
+        List<Settlement> settlements = new ArrayList<Settlement>();
+        for(int i = 0; i < checkInList.size(); i++){
+            Reserve reserve = checkInList.get(i);
+            Settlement settlement = reserveService.getSettlementsByReserve(reserve);
+            settlements.add(settlement);
+        }
+
+        model.addAttribute("settlementList", settlements);
+
+        List<Pay> payList = payService.getPayByHost(id);
+
+        model.addAttribute("balance", hostel.getBalance());
+        model.addAttribute("reserveList", reserveList);
+        model.addAttribute("cancelList", cancelList);
+        model.addAttribute("checkInList",checkInList);
+        model.addAttribute("checkOutList", checkOutList);
+        model.addAttribute("payList", payList);
+
         return "hostel/home";
     }
 
@@ -204,15 +242,75 @@ public class HostelController {
         return "customer/hostelSingle";
     }
 
-    @RequestMapping(value = "getHostelPlan/{id}/{inTime}/{outTime}", method = RequestMethod.GET)
+    @RequestMapping(value = "/getHostelPlan/{id}/{inTime}/{outTime}", method = RequestMethod.GET)
     public String getHostelPlan(@PathVariable("id") int id, @PathVariable("inTime") Date inTime,
                             @PathVariable("outTime") Date outTime, Model model){
         List<Plan> planList = planService.getPlanByTime(inTime,outTime,id);
 
-        model.addAttribute("planList", planList);
+        model.addAttribute("/planList", planList);
         return "customer/detail/hostelPlan";
 
     }
+
+    @RequestMapping(value = "/getReserve/{id}", method = RequestMethod.GET)
+    public @ResponseBody Reserve getReserve(@PathVariable("id") int id){
+        Map<String, Object> map = new HashMap<String, Object>();
+        Reserve reserve = reserveService.getReserveInfo(id);
+        return reserve;
+
+    }
+
+    @RequestMapping(value = "/getCheckIn", method = RequestMethod.GET)
+    public String getCheckInPage(){
+        return "hostel/checkin";
+    }
+
+    @RequestMapping(value = "/getAddCheckInCust", method = RequestMethod.GET)
+    public String getAddCheckInCustPage(int index, Model model){
+        model.addAttribute("index",index);
+        return "hostel/detail/checkInCust";
+    }
+
+    @RequestMapping(value = "/checkIn", method = RequestMethod.POST,consumes = "application/json")
+    @ResponseBody
+    public Map<String, Object> checkIn(HttpSession session, @RequestBody Map<String, String> custMap){
+        String custId = custMap.get("reserveId");
+        int id = Integer.parseInt(custMap.get("reserveId"));
+        Map<String,String> cmap = new HashMap<String, String>();
+        for(String key:custMap.keySet()){
+            if(key.equals("reserveId")){
+                continue;
+            }
+            cmap.put(key, custMap.get(key));
+        }
+        Map<String, Object> map = reserveService.checkInByReserve(id,cmap);
+
+        return map;
+    }
+
+    @RequestMapping(value = "/getCheckOutPage", method = RequestMethod.GET)
+    public String getCheckOutPage(){
+        return "hostel/checkout";
+    }
+
+    @RequestMapping(value = "/getCheckInList", method = RequestMethod.GET)
+    public String getReserveList(Model model, HttpSession session){
+        int hostId = (Integer)session.getAttribute("host_id");
+        List<Reserve> reserveList = reserveService.getReserveByHostAndStatus(hostId, DataUtil.CHECK_IN);
+        model.addAttribute("reserveList",reserveList);
+        return "hostel/detail/checkInList";
+
+    }
+
+    @RequestMapping(value = "/checkOut", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> checkout(int reserveId){
+        Map<String,Object> map = reserveService.checkOutByReserve(reserveId);
+        return map;
+    }
+
+
+
 
 
 }

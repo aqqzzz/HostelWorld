@@ -33,7 +33,16 @@ public interface ReserveDAO extends JpaRepository<Reserve, Integer>{
     @Query("update Reserve as r set r.actualLeaveTime=?1 where r.id=?2")
     int updateByActualLeaveTime(Date date, int id);
 
+    @Modifying
+    @Transactional
+    @Query("update Reserve as r set r.cancelTime=?1 where r.id=?2")
+    int updateByCancelTime(Date date, int id);
+
     List<Reserve> findByCustomerByCustId(Customer customer);
 
     List<Reserve> findByRoomInfoById(RoomInfo roomInfo);
+
+    List<Reserve> findByCustomerByCustIdAndStatus(Customer customer, byte status);
+
+    List<Reserve> findByRoomInfoByIdAndStatus(RoomInfo roomInfo, byte status);
 }

@@ -1,6 +1,7 @@
 package edu.nju.hostelWorld.service;
 
 import edu.nju.hostelWorld.entity.Apply;
+import edu.nju.hostelWorld.entity.Customer;
 import edu.nju.hostelWorld.entity.Settlement;
 
 import java.util.List;
@@ -23,5 +24,9 @@ public interface ManagerService {
     public Map<String, Object> acceptSettlement(int id, double rate);
 
     public List<Settlement> getSettlementListByStatus(byte status);
+
+    public List<Customer> getAllCustomer();
+
+    public Customer getManager();
 
 }

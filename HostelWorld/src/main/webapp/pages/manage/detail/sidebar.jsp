@@ -10,10 +10,11 @@
 <div class="col-lg-2 sidebar">
     <ul class="nav nav-pills nav-stacked">
         <li class="active">
-            <a href="#">审批申请</a>
+            <a href="/manage/">审批申请</a>
         </li>
-        <li><a href="#">客栈统计</a></li>
-        <li><a href="#">会员统计</a></li>
-        <li><a href="#">财务状况</a></li>
+        <li><a href="/manage/settlement">钱款结算</a></li>
+        <li><a href="/manage/getHostelRecord">客栈统计</a></li>
+        <li><a href="/manage/getCustRecord">会员统计</a></li>
+        <li><a href="/manage/getWorldRecord">财务状况</a></li>
     </ul>
 </div>

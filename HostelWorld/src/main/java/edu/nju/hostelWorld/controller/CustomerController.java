@@ -4,6 +4,7 @@ import com.sun.org.apache.xpath.internal.operations.Mod;
 import edu.nju.hostelWorld.dao.PlanDAO;
 import edu.nju.hostelWorld.entity.*;
 import edu.nju.hostelWorld.service.*;
+import edu.nju.hostelWorld.util.DataUtil;
 import org.dom4j.rule.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -16,10 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by 张文玘 on 2017/3/10.
@@ -37,6 +35,9 @@ public class CustomerController {
     HostelService hostelService;
     @Autowired
     RoomInfoService roomInfoService;
+    @Autowired
+    PayService payService;
+
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String getUserHome(){
@@ -194,7 +195,63 @@ public class CustomerController {
         return "customer/detail/hostelPlan";
     }
 
+    @RequestMapping(value = "/reserveRecord", method = RequestMethod.GET)
+    public String getReserveRecord(HttpSession session, Model model){
+        int id = (Integer) session.getAttribute("cust_id");
 
+        List<Reserve> list = reserveService.getReserveByCust(id);
+        List<Reserve> reserveList = new ArrayList<Reserve>();
+        List<Reserve> cancelList = new ArrayList<Reserve>();
+        List<Reserve> checkInList = new ArrayList<Reserve>();
+        List<Reserve> checkOutList = new ArrayList<Reserve>();
+
+        for(int i = 0; i < list.size(); i++){
+            Reserve reserve = list.get(i);
+            if(reserve.getStatus()==1){
+                reserveList.add(reserve);
+            }else if(reserve.getStatus()==0){
+                cancelList.add(reserve);
+            }else if(reserve.getStatus()==2){
+                checkInList.add(reserve);
+            }else{
+                checkOutList.add(reserve);
+            }
+        }
+        List<Settlement> settlements = new ArrayList<Settlement>();
+        for(int i = 0; i < cancelList.size(); i++){
+            Reserve reserve = cancelList.get(i);
+            Settlement settlement = reserveService.getSettlementsByReserve(reserve);
+            settlements.add(settlement);
+        }
+
+        model.addAttribute("settlementList", settlements);
+        model.addAttribute("reserveList", reserveList);
+        model.addAttribute("cancelList", cancelList);
+        model.addAttribute("checkInList",checkInList);
+        model.addAttribute("checkOutList", checkOutList);
+
+        return "customer/reserveRecord";
+    }
+
+    @RequestMapping(value = "/cancelReserve", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> cancelReserve(int reserveId){
+        Map<String, Object> map = reserveService.cancelReserve(reserveId);
+        return map;
+    }
+
+    @RequestMapping(value = "/payRecord",method = RequestMethod.GET)
+    public String getPayRecordPage(HttpSession session, Model model){
+        int id = (Integer) session.getAttribute("cust_id");
+        Customer customer = customerService.getCustomerById(id);
+
+        model.addAttribute("customer", customer);
+
+        List<Pay> payList = payService.getPayByCust(id);
+        model.addAttribute("payList", payList);
+
+        return "customer/payRecord";
+    }
 
 
 }

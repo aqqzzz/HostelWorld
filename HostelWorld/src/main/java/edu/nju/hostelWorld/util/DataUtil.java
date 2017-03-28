@@ -45,6 +45,14 @@ public class DataUtil {
     public static byte PAY_BY_CARD = 0; //使用会员卡付款
     public static byte PAY_BY_CASH = 1; //使用现金付款
 
+    //入住登记类型
+    public static byte CHECKIN_VIP = 0; //会员登记入住
+    public static byte CHECKIN_NOVIP = 1; //非会员登记入住
+
+    //消费记录类型
+    public static byte PAY_IN = 0; //收入
+    public static byte PAY_OUT = 1; //支出
+
     public static boolean isPhoneNum(String phoneNumber){
         Pattern pattern = Pattern.compile("^\\d{11}$");
         Matcher matcher = pattern.matcher(phoneNumber);

@@ -25,538 +25,647 @@
     <table id="20" parent="1" name="room_info"/>
     <table id="21" parent="1" name="room_level"/>
     <table id="22" parent="1" name="settlement"/>
-    <column id="23" parent="9" name="id">
+    <table id="23" parent="1" name="check_in_cust"/>
+    <column id="24" parent="9" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="24" parent="9" name="hostel_id">
+    <column id="25" parent="9" name="hostel_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="25" parent="9" name="create_time">
+    <column id="26" parent="9" name="create_time">
       <data-type>date|0</data-type>
     </column>
-    <column id="26" parent="9" name="type">
+    <column id="27" parent="9" name="type">
       <comment>申请类型，0开店申请，1修改信息申请</comment>
       <data-type>tinyint(1)|0</data-type>
     </column>
-    <column id="27" parent="9" name="status">
+    <column id="28" parent="9" name="status">
       <comment>审批状态，0未审批，1通过，2未通过</comment>
       <data-type>tinyint(1)|0</data-type>
     </column>
-    <index id="28" parent="9" name="hostel_apply">
+    <index id="29" parent="9" name="hostel_apply">
       <columns>hostel_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="29" parent="9" name="PRIMARY">
+    <key id="30" parent="9" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="30" parent="9" name="hostel_apply">
+    <foreign-key id="31" parent="9" name="hostel_apply">
       <columns>hostel_id</columns>
       <ref-key>~.hostel.PRIMARY</ref-key>
       <cascade-update-rule>update</cascade-update-rule>
       <cascade-delete-rule>delete</cascade-delete-rule>
     </foreign-key>
-    <column id="31" parent="10" name="id">
+    <column id="32" parent="10" name="id">
       <mandatory>1</mandatory>
       <data-type>varchar(20)|0</data-type>
     </column>
-    <column id="32" parent="10" name="balance">
+    <column id="33" parent="10" name="balance">
       <data-type>double|0</data-type>
     </column>
-    <key id="33" parent="10" name="PRIMARY">
+    <key id="34" parent="10" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <column id="34" parent="11" name="id">
+    <column id="35" parent="11" name="id">
       <comment>用于唯一标识等级id，和customer表没有关系</comment>
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="35" parent="11" name="consump_total">
+    <column id="36" parent="11" name="consump_total">
       <comment>这个级别的最低消费数</comment>
       <data-type>double|0</data-type>
     </column>
-    <column id="36" parent="11" name="level">
+    <column id="37" parent="11" name="level">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="37" parent="11" name="discount">
+    <column id="38" parent="11" name="discount">
       <data-type>double|0</data-type>
     </column>
-    <key id="38" parent="11" name="PRIMARY">
+    <key id="39" parent="11" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <column id="39" parent="12" name="id">
+    <column id="40" parent="12" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="40" parent="12" name="start_time">
+    <column id="41" parent="12" name="start_time">
       <data-type>date|0</data-type>
     </column>
-    <column id="41" parent="12" name="pause_time">
+    <column id="42" parent="12" name="pause_time">
       <data-type>date|0</data-type>
     </column>
-    <column id="42" parent="12" name="stop_time">
+    <column id="43" parent="12" name="stop_time">
       <data-type>date|0</data-type>
     </column>
-    <key id="43" parent="12" name="PRIMARY">
+    <key id="44" parent="12" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="44" parent="12" name="cust_status_id">
+    <foreign-key id="45" parent="12" name="cust_status_id">
       <columns>id</columns>
       <ref-key>~.customer.PRIMARY</ref-key>
       <cascade-update-rule>update</cascade-update-rule>
       <cascade-delete-rule>delete</cascade-delete-rule>
     </foreign-key>
-    <column id="45" parent="13" name="userid">
+    <column id="46" parent="13" name="userid">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="46" parent="13" name="password">
+    <column id="47" parent="13" name="password">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="47" parent="13" name="phone">
+    <column id="48" parent="13" name="phone">
       <data-type>varchar(11)|0</data-type>
     </column>
-    <column id="48" parent="13" name="status">
+    <column id="49" parent="13" name="status">
       <comment>会员状态，0未激活，1已激活，2暂停，3停止</comment>
       <data-type>tinyint(1)|0</data-type>
     </column>
-    <column id="49" parent="13" name="name">
+    <column id="50" parent="13" name="name">
       <comment>姓名</comment>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="50" parent="13" name="gender">
+    <column id="51" parent="13" name="gender">
       <data-type>tinyint(1)|0</data-type>
     </column>
-    <column id="51" parent="13" name="bank_card">
+    <column id="52" parent="13" name="bank_card">
       <comment>银行卡号</comment>
       <data-type>varchar(20)|0</data-type>
     </column>
-    <column id="52" parent="13" name="balance">
+    <column id="53" parent="13" name="balance">
       <comment>卡余额</comment>
       <data-type>double|0</data-type>
     </column>
-    <column id="53" parent="13" name="point">
+    <column id="54" parent="13" name="point">
       <comment>积分</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="54" parent="13" name="consump_total">
+    <column id="55" parent="13" name="consump_total">
       <comment>总消费金额</comment>
       <data-type>double|0</data-type>
     </column>
-    <column id="55" parent="13" name="cust_level_id">
+    <column id="56" parent="13" name="cust_level_id">
       <data-type>int(11)|0</data-type>
     </column>
-    <index id="56" parent="13" name="cust_bank">
+    <index id="57" parent="13" name="cust_bank">
       <columns>bank_card</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="57" parent="13" name="PRIMARY">
+    <index id="58" parent="13" name="FK_ddnnawsbsdvnuxs4fbihfp33f">
+      <columns>cust_level_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="59" parent="13" name="PRIMARY">
       <columns>userid</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="58" parent="13" name="cust_bank">
+    <foreign-key id="60" parent="13" name="cust_bank">
       <columns>bank_card</columns>
       <ref-key>~.bank_account.PRIMARY</ref-key>
       <cascade-update-rule>update</cascade-update-rule>
       <cascade-delete-rule>set_null</cascade-delete-rule>
     </foreign-key>
-    <column id="59" parent="14" name="id">
+    <foreign-key id="61" parent="13" name="FK_ddnnawsbsdvnuxs4fbihfp33f">
+      <columns>cust_level_id</columns>
+      <ref-key>~.cust_level.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="62" parent="14" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="60" parent="14" name="name">
+    <column id="63" parent="14" name="name">
       <mandatory>1</mandatory>
       <data-type>varchar(256)|0</data-type>
     </column>
-    <column id="61" parent="14" name="password">
+    <column id="64" parent="14" name="password">
       <mandatory>1</mandatory>
       <data-type>varchar(256)|0</data-type>
     </column>
-    <column id="62" parent="14" name="discription">
+    <column id="65" parent="14" name="discription">
       <data-type>varchar(256)|0</data-type>
     </column>
-    <column id="63" parent="14" name="location">
+    <column id="66" parent="14" name="location">
       <comment>客栈地址</comment>
       <data-type>varchar(256)|0</data-type>
     </column>
-    <column id="64" parent="14" name="create_time">
+    <column id="67" parent="14" name="create_time">
       <data-type>date|0</data-type>
     </column>
-    <column id="65" parent="14" name="phone">
+    <column id="68" parent="14" name="phone">
       <comment>店铺联系方式</comment>
       <data-type>varchar(11)|0</data-type>
     </column>
-    <column id="66" parent="14" name="bank_card">
+    <column id="69" parent="14" name="bank_card">
       <data-type>varchar(20)|0</data-type>
     </column>
-    <column id="67" parent="14" name="balance">
+    <column id="70" parent="14" name="balance">
       <data-type>double(11,2)|0</data-type>
       <default-expression>&apos;0.00&apos;</default-expression>
     </column>
-    <index id="68" parent="14" name="FK_mj0x9baccf63wnt16rkd2x8vu">
+    <index id="71" parent="14" name="FK_mj0x9baccf63wnt16rkd2x8vu">
       <columns>bank_card</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="69" parent="14" name="PRIMARY">
+    <key id="72" parent="14" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="70" parent="14" name="FK_mj0x9baccf63wnt16rkd2x8vu">
+    <foreign-key id="73" parent="14" name="FK_mj0x9baccf63wnt16rkd2x8vu">
       <columns>bank_card</columns>
       <ref-key>~.bank_account.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="71" parent="14" name="hostel_bank">
+    <foreign-key id="74" parent="14" name="hostel_bank">
       <columns>bank_card</columns>
       <ref-key>~.bank_account.PRIMARY</ref-key>
       <cascade-update-rule>update</cascade-update-rule>
       <cascade-delete-rule>set_null</cascade-delete-rule>
     </foreign-key>
-    <column id="72" parent="15" name="id">
+    <column id="75" parent="15" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="73" parent="15" name="hostel_id">
+    <column id="76" parent="15" name="hostel_id">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="74" parent="15" name="url">
+    <column id="77" parent="15" name="url">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <index id="75" parent="15" name="hostel_img">
+    <index id="78" parent="15" name="hostel_img">
       <columns>hostel_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="76" parent="15" name="PRIMARY">
+    <key id="79" parent="15" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="77" parent="15" name="hostel_img">
+    <foreign-key id="80" parent="15" name="hostel_img">
       <columns>hostel_id</columns>
       <ref-key>~.hostel.PRIMARY</ref-key>
       <cascade-update-rule>update</cascade-update-rule>
       <cascade-delete-rule>delete</cascade-delete-rule>
     </foreign-key>
-    <column id="78" parent="16" name="id">
+    <column id="81" parent="16" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="79" parent="16" name="hostel_id">
+    <column id="82" parent="16" name="hostel_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="80" parent="16" name="name">
+    <column id="83" parent="16" name="name">
       <comment>店主姓名</comment>
       <data-type>varchar(0)|0</data-type>
     </column>
-    <column id="81" parent="16" name="id_card">
+    <column id="84" parent="16" name="id_card">
       <comment>店主身份证号</comment>
       <data-type>varchar(0)|0</data-type>
     </column>
-    <column id="82" parent="16" name="phone">
+    <column id="85" parent="16" name="phone">
       <data-type>varchar(0)|0</data-type>
     </column>
-    <index id="83" parent="16" name="FK_5f90isdshyp7pnrldp2htxn5n">
+    <index id="86" parent="16" name="FK_5f90isdshyp7pnrldp2htxn5n">
       <columns>hostel_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="84" parent="16" name="PRIMARY">
+    <key id="87" parent="16" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="85" parent="16" name="FK_5f90isdshyp7pnrldp2htxn5n">
+    <foreign-key id="88" parent="16" name="FK_5f90isdshyp7pnrldp2htxn5n">
       <columns>hostel_id</columns>
       <ref-key>~.hostel.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="86" parent="16" name="hostel_keeper">
+    <foreign-key id="89" parent="16" name="hostel_keeper">
       <columns>hostel_id</columns>
       <ref-key>~.hostel.PRIMARY</ref-key>
       <cascade-update-rule>update</cascade-update-rule>
       <cascade-delete-rule>delete</cascade-delete-rule>
     </foreign-key>
-    <column id="87" parent="17" name="id">
+    <column id="90" parent="17" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
     </column>
-    <column id="88" parent="17" name="cust_id">
+    <column id="91" parent="17" name="cust_id">
       <data-type>int(7)|0</data-type>
     </column>
-    <column id="89" parent="17" name="money">
+    <column id="92" parent="17" name="money">
       <comment>缴费记录表（用于判断能否激活会员资格）</comment>
       <data-type>double|0</data-type>
     </column>
-    <column id="90" parent="17" name="time">
+    <column id="93" parent="17" name="time">
       <data-type>date|0</data-type>
     </column>
-    <index id="91" parent="17" name="cust_pay">
+    <column id="94" parent="17" name="type">
+      <comment>0代表收入，1代表支出</comment>
+      <data-type>tinyint(4)|0</data-type>
+    </column>
+    <column id="95" parent="17" name="reason">
+      <comment>钱款状态</comment>
+      <data-type>tinyint(4)|0</data-type>
+    </column>
+    <column id="96" parent="17" name="host_id">
+      <data-type>int(7)|0</data-type>
+    </column>
+    <index id="97" parent="17" name="cust_pay">
       <columns>cust_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="92" parent="17" name="PRIMARY">
+    <key id="98" parent="17" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="93" parent="17" name="cust_pay">
+    <foreign-key id="99" parent="17" name="cust_pay">
       <columns>cust_id</columns>
       <ref-key>~.customer.PRIMARY</ref-key>
       <cascade-update-rule>update</cascade-update-rule>
       <cascade-delete-rule>delete</cascade-delete-rule>
     </foreign-key>
-    <column id="94" parent="18" name="id">
+    <column id="100" parent="18" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="95" parent="18" name="hostel_id">
+    <column id="101" parent="18" name="hostel_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="96" parent="18" name="start_time">
+    <column id="102" parent="18" name="start_time">
       <data-type>date|0</data-type>
     </column>
-    <column id="97" parent="18" name="end_time">
+    <column id="103" parent="18" name="end_time">
       <data-type>date|0</data-type>
     </column>
-    <column id="98" parent="18" name="room_level_id">
+    <column id="104" parent="18" name="room_level_id">
       <comment>房间类型</comment>
       <data-type>tinyint(4)|0</data-type>
     </column>
-    <column id="99" parent="18" name="price">
+    <column id="105" parent="18" name="price">
       <data-type>double|0</data-type>
     </column>
-    <index id="100" parent="18" name="hostel_plan">
+    <index id="106" parent="18" name="hostel_plan">
       <columns>hostel_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="101" parent="18" name="PRIMARY">
+    <key id="107" parent="18" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="102" parent="18" name="hostel_plan">
+    <foreign-key id="108" parent="18" name="hostel_plan">
       <columns>hostel_id</columns>
       <ref-key>~.hostel.PRIMARY</ref-key>
-      <cascade-update-rule>update</cascade-update-rule>
-      <cascade-delete-rule>delete</cascade-delete-rule>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="103" parent="19" name="id">
+    <column id="109" parent="19" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="104" parent="19" name="cust_id">
+    <column id="110" parent="19" name="cust_id">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="105" parent="19" name="room_info_id">
+    <column id="111" parent="19" name="room_info_id">
       <comment>房间信息id</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="106" parent="19" name="create_time">
+    <column id="112" parent="19" name="create_time">
       <data-type>date|0</data-type>
     </column>
-    <column id="107" parent="19" name="discount">
+    <column id="113" parent="19" name="discount">
       <data-type>double|0</data-type>
     </column>
-    <column id="108" parent="19" name="original">
+    <column id="114" parent="19" name="original">
       <comment>原始价格</comment>
       <data-type>double|0</data-type>
     </column>
-    <column id="109" parent="19" name="actual">
+    <column id="115" parent="19" name="actual">
       <comment>实际价格</comment>
       <data-type>double|0</data-type>
     </column>
-    <column id="110" parent="19" name="points">
+    <column id="116" parent="19" name="points">
       <comment>赠送积分</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="111" parent="19" name="status">
+    <column id="117" parent="19" name="status">
       <comment>订单状态，0已取消，1已预订，2已入住，3已离店</comment>
       <data-type>tinyint(1)|0</data-type>
     </column>
-    <column id="112" parent="19" name="checkin_time">
+    <column id="118" parent="19" name="checkin_time">
       <comment>入住时间</comment>
       <data-type>date|0</data-type>
     </column>
-    <column id="113" parent="19" name="leave_time">
+    <column id="119" parent="19" name="leave_time">
       <comment>离店时间</comment>
       <data-type>date|0</data-type>
     </column>
-    <column id="114" parent="19" name="actual_checkin_time">
+    <column id="120" parent="19" name="actual_checkin_time">
       <comment>实际入住时间</comment>
       <data-type>date|0</data-type>
     </column>
-    <column id="115" parent="19" name="actual_leave_time">
+    <column id="121" parent="19" name="actual_leave_time">
       <comment>实际离店时间</comment>
       <data-type>date|0</data-type>
     </column>
-    <column id="116" parent="19" name="pay_type">
+    <column id="122" parent="19" name="pay_type">
       <comment>支付类别，0为会员卡支付，1为现金支付</comment>
       <data-type>tinyint(1)|0</data-type>
     </column>
-    <index id="117" parent="19" name="reserve_cust">
-      <columns>cust_id</columns>
-      <desc-columns></desc-columns>
-    </index>
-    <index id="118" parent="19" name="reserve_room">
+    <column id="123" parent="19" name="cancel_time">
+      <data-type>date|0</data-type>
+    </column>
+    <index id="124" parent="19" name="FK_lot5johxdn8kw768utvtlei57">
       <columns>room_info_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="119" parent="19" name="PRIMARY">
+    <index id="125" parent="19" name="reserve_cust">
+      <columns>cust_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="126" parent="19" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="120" parent="19" name="reserve_cust">
+    <foreign-key id="127" parent="19" name="reserve_cust">
       <columns>cust_id</columns>
       <ref-key>~.customer.PRIMARY</ref-key>
       <cascade-update-rule>update</cascade-update-rule>
       <cascade-delete-rule>delete</cascade-delete-rule>
     </foreign-key>
-    <column id="121" parent="20" name="id">
+    <foreign-key id="128" parent="19" name="FK_lot5johxdn8kw768utvtlei57">
+      <columns>room_info_id</columns>
+      <ref-key>~.room_info.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="129" parent="20" name="id">
       <comment>自增id</comment>
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="122" parent="20" name="hostel_id">
+    <column id="130" parent="20" name="hostel_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="123" parent="20" name="room_level_id">
+    <column id="131" parent="20" name="room_level_id">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="124" parent="20" name="room_num">
+    <column id="132" parent="20" name="room_num">
       <comment>房间编号</comment>
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="125" parent="20" name="free_time">
+    <column id="133" parent="20" name="free_time">
       <comment>客栈在这个计划时间段的每一天是否空闲，每过一天左移一位，0为空闲，1为已订&#xd;
 以30天为周期，和today结合判断结束日期是否超出计划结束日期</comment>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="126" parent="20" name="today">
+    <column id="134" parent="20" name="today">
       <comment>今天日期，用于判断计划是否过期</comment>
       <data-type>date|0</data-type>
     </column>
-    <column id="127" parent="20" name="plan_id">
+    <column id="135" parent="20" name="plan_id">
       <data-type>int(11)|0</data-type>
     </column>
-    <index id="128" parent="20" name="FK_99ev80jlnjpng6711kn1kqg0t">
+    <index id="136" parent="20" name="FK_72a25bqdw7cp5le2walbk5yc7">
+      <columns>room_level_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="137" parent="20" name="FK_99ev80jlnjpng6711kn1kqg0t">
       <columns>hostel_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="129" parent="20" name="PRIMARY">
+    <index id="138" parent="20" name="FK_fv48se9c7upqbhlqwj0cbk6lt">
+      <columns>plan_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="139" parent="20" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="130" parent="20" name="FK_99ev80jlnjpng6711kn1kqg0t">
+    <foreign-key id="140" parent="20" name="FK_99ev80jlnjpng6711kn1kqg0t">
       <columns>hostel_id</columns>
       <ref-key>~.hostel.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="131" parent="20" name="hostel_room">
+    <foreign-key id="141" parent="20" name="hostel_room">
       <columns>hostel_id</columns>
       <ref-key>~.hostel.PRIMARY</ref-key>
       <cascade-update-rule>update</cascade-update-rule>
       <cascade-delete-rule>delete</cascade-delete-rule>
     </foreign-key>
-    <column id="132" parent="21" name="id">
+    <foreign-key id="142" parent="20" name="FK_72a25bqdw7cp5le2walbk5yc7">
+      <columns>room_level_id</columns>
+      <ref-key>~.room_level.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="143" parent="20" name="FK_fv48se9c7upqbhlqwj0cbk6lt">
+      <columns>plan_id</columns>
+      <ref-key>~.plan.PRIMARY</ref-key>
+      <cascade-update-rule>update</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <column id="144" parent="21" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="133" parent="21" name="hostel_id">
+    <column id="145" parent="21" name="hostel_id">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="134" parent="21" name="room_type">
+    <column id="146" parent="21" name="room_type">
       <comment>房间类型</comment>
       <data-type>tinyint(4)|0</data-type>
     </column>
-    <column id="135" parent="21" name="room_count">
+    <column id="147" parent="21" name="room_count">
       <comment>房间数量</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="136" parent="21" name="room_name">
+    <column id="148" parent="21" name="room_name">
       <comment>房间名称</comment>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="137" parent="21" name="max_people">
+    <column id="149" parent="21" name="max_people">
       <comment>该房间类型最多可以容纳的人数</comment>
       <data-type>int(3)|0</data-type>
     </column>
-    <column id="138" parent="21" name="start_room_num">
+    <column id="150" parent="21" name="start_room_num">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="139" parent="21" name="end_room_num">
+    <column id="151" parent="21" name="end_room_num">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="140" parent="21" name="discription">
+    <column id="152" parent="21" name="discription">
       <comment>房间描述</comment>
       <data-type>varchar(256)|0</data-type>
     </column>
-    <index id="141" parent="21" name="FK_7x5y5rclp34c1jocs0gmcmua0">
+    <index id="153" parent="21" name="FK_7x5y5rclp34c1jocs0gmcmua0">
       <columns>hostel_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="142" parent="21" name="PRIMARY">
+    <key id="154" parent="21" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="143" parent="21" name="FK_7x5y5rclp34c1jocs0gmcmua0">
+    <foreign-key id="155" parent="21" name="FK_7x5y5rclp34c1jocs0gmcmua0">
       <columns>hostel_id</columns>
       <ref-key>~.hostel.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="144" parent="21" name="hostel_room_level">
+    <foreign-key id="156" parent="21" name="hostel_room_level">
       <columns>hostel_id</columns>
       <ref-key>~.hostel.PRIMARY</ref-key>
       <cascade-update-rule>update</cascade-update-rule>
       <cascade-delete-rule>delete</cascade-delete-rule>
     </foreign-key>
-    <column id="145" parent="22" name="id">
+    <column id="157" parent="22" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="146" parent="22" name="reserve_id">
+    <column id="158" parent="22" name="reserve_id">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="147" parent="22" name="reason">
+    <column id="159" parent="22" name="reason">
       <comment>钱款申请原因，0代表取消订单，退款操作，1代表客户入住，客栈结算申请</comment>
       <data-type>tinyint(4)|0</data-type>
     </column>
-    <column id="148" parent="22" name="status">
+    <column id="160" parent="22" name="status">
       <comment>结算状态，0代表申请中，1代表已结算</comment>
       <data-type>tinyint(4)|0</data-type>
     </column>
-    <column id="149" parent="22" name="amount">
+    <column id="161" parent="22" name="amount">
       <comment>操作钱款数</comment>
       <data-type>double|0</data-type>
     </column>
-    <column id="150" parent="22" name="actual_rate">
+    <column id="162" parent="22" name="actual_rate">
       <data-type>double|0</data-type>
     </column>
-    <index id="151" parent="22" name="reserve_settle">
+    <column id="163" parent="22" name="create_time">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="164" parent="22" name="settle_time">
+      <data-type>date|0</data-type>
+    </column>
+    <index id="165" parent="22" name="reserve_settle">
       <columns>reserve_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="152" parent="22" name="PRIMARY">
+    <key id="166" parent="22" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="153" parent="22" name="reserve_settle">
+    <foreign-key id="167" parent="22" name="reserve_settle">
       <columns>reserve_id</columns>
       <ref-key>~.reserve.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="168" parent="23" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="169" parent="23" name="reserve_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="170" parent="23" name="arrive_time">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="171" parent="23" name="leave_time">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="172" parent="23" name="type">
+      <comment>type为0代表会员预定，type为1代表非会员预定</comment>
+      <data-type>tinyint(4)|0</data-type>
+    </column>
+    <column id="173" parent="23" name="cust_name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="174" parent="23" name="cust_phone">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="175" parent="23" name="room_info_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="176" parent="23" name="FK_j96qnxyx0ml75yl4sa5gm94x">
+      <columns>room_info_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="177" parent="23" name="FK_k0cno2idlflcu2ss08ep34ktr">
+      <columns>reserve_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="178" parent="23" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="179" parent="23" name="FK_k0cno2idlflcu2ss08ep34ktr">
+      <columns>reserve_id</columns>
+      <ref-key>~.reserve.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="180" parent="23" name="FK_j96qnxyx0ml75yl4sa5gm94x">
+      <columns>room_info_id</columns>
+      <ref-key>~.room_info.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>

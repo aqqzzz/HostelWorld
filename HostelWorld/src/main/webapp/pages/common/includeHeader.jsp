@@ -30,12 +30,12 @@
     <link rel="stylesheet" href="<%=basePath%>assets/css/style.css?v=<%=new Date()%>"/>
 
 
-    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<%=basePath%>assets/vendor/jquery/jquery-3.1.1.min.js"></script>
 
     <script type="text/javascript" src="<%=basePath%>assets/js/amazeui.min.js"></script>
     <script type="text/javascript" src="<%=basePath%>assets/js/amaze/amazeui.widgets.helper.min.js"></script>
     <script type="text/javascript" src="<%=basePath%>assets/js/amaze/amazeui.ie8polyfill.min.js"></script>
     <script type="text/javascript" src="<%=basePath%>assets/js/amaze/handlebars.min.js"></script>
+    <script type="text/javascript" src="<%=basePath%>assets/vendor/echarts.js"></script>
     <script type="text/javascript" src="<%=basePath%>assets/js/auth.js"></script>
 </head>

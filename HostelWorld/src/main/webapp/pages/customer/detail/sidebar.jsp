@@ -12,9 +12,8 @@
             <li class="active">
                 <a href="/customer/dashboard">我的首页</a>
             </li>
-            <li><a href="#">我的预订</a></li>
-            <li><a href="#">我的入住</a></li>
-            <li><a href="#">我的消费</a></li>
+            <li><a href="/customer/reserveRecord">我的订单</a></li>
+            <li><a href="/customer/payRecord">我的消费</a></li>
             <li><a href="/customer/info">我的信息</a></li>
         </ul>
     </div>
